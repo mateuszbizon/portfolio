@@ -16,7 +16,7 @@ function Accordions({ accordions }: Props) {
 				const isActive = currentIndex == index ? true : false;
 
 				return (
-					<div key={item.title} className='border-b border-b-light-3 text-lg md:text-xl'>
+					<div key={item.title} className='border-b border-b-light-3 first:border-t first:border-t-light-3 text-lg md:text-xl'>
 						<button
 							className={`flex justify-between py-4 px-6 hover:bg-light-2 transition duration-300 w-full ${isActive && "bg-light-2 text-primary-2 font-medium"}`}
 							onClick={() => handleSetIndexAccordion(index)}>
