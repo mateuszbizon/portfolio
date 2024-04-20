@@ -16,7 +16,7 @@
     }
 
     .title-margin-bottom {
-        @apply mb-5 lg:mb-14;
+        @apply mb-7 lg:mb-14;
     }
 
     .main-padding-x {
