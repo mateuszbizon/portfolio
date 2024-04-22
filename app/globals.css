@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --a: #f2f2f2;
-}
 
 @layer components {
     .title-1 {

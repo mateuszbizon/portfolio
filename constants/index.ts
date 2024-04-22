@@ -3,3 +3,5 @@ export const ABOUT_ACCORDIONS: AccordionType[] = [
     { title: "Zawodowo", text: "Aktualnie szukam pracy jako front-end developer, specjalizując się w bibliotece React. Front-endu zacząłem się uczyć w technikum 2018 roku, gdzie poznawałem podstawy programowania w języku C++, a potem przeszedłem na HTML, CSS oraz JavaScript. <br /><br /> Bardziej poważnie zacząłem się interesować front-endem na studiach, gdzie poznałem Git, Github, React czy różnicę pomiędzy front-endem a back-endem." },
     { title: "Naukowo", text: "W marcu 2024 roku ukończyłem studia inżynierskie na kierunku informatyka w Collegium Witelona w Legnicy. Aktualnie nie planuję iść na dalsze studia, gdyż chcę skupić się na znalezieniu pracy, ale w przyszłości chciałbym pójść na studia magisterskie." }
 ]
+
+export const PROJECTS_BTNS = ["HTML & CSS", "JavaScript", "React", "Next.js"]
