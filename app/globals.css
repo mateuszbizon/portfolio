@@ -23,4 +23,12 @@
     .section {
         @apply py-5 sm:py-10 md:py-14 lg:py-20;
     }
+
+    .projects-container {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5;
+    }
+
+    .icon-text {
+        @apply lg:hidden text-xs;
+    }
 }

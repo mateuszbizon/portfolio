@@ -5,3 +5,7 @@ export const ABOUT_ACCORDIONS: AccordionType[] = [
 ]
 
 export const PROJECTS_BTNS = ["HTML & CSS", "JavaScript", "React", "Next.js"]
+
+export const HTML_CSS_PROJECTS: ProjectType[] = [
+    { title: "Recipe page", img: "/recipe.jpg", alt: "recipe app", link: "https://mateuszbizon.github.io/recipe_page/", github: "https://github.com/mateuszbizon/recipe_page" },
+]
