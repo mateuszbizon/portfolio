@@ -9,3 +9,8 @@ export const PROJECTS_BTNS = ["HTML & CSS", "JavaScript", "React", "Next.js"]
 export const HTML_CSS_PROJECTS: ProjectType[] = [
     { title: "Recipe page", img: "/recipe.jpg", alt: "recipe app", link: "https://mateuszbizon.github.io/recipe_page/", github: "https://github.com/mateuszbizon/recipe_page" },
 ]
+
+export const JAVASCRIPT_PROJECTS: ProjectType[] = [
+    { title: "Newsletter sign-up", img: "/newsletter.jpg", alt: "newsletter app", link: "https://mateuszbizon.github.io/newsletter_signup/", github: "https://github.com/mateuszbizon/newsletter_signup" },
+    { title: "REST countries API", img: "/countries_api.jpg", alt: "countries api app", link: "https://mateuszbizon.github.io/Countries-API/", github: "https://github.com/mateuszbizon/Countries-API" }
+]

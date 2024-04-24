@@ -1,8 +1,10 @@
 import React from 'react'
+import ProjectsContainer from './ProjectsContainer'
+import { JAVASCRIPT_PROJECTS } from '@/constants'
 
 function JavaScriptProjects() {
   return (
-    <div>JavaScriptProjects</div>
+    <ProjectsContainer projects={JAVASCRIPT_PROJECTS} />
   )
 }
 
