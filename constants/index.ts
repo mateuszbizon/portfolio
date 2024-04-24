@@ -14,3 +14,9 @@ export const JAVASCRIPT_PROJECTS: ProjectType[] = [
     { title: "Newsletter sign-up", img: "/newsletter.jpg", alt: "newsletter app", link: "https://mateuszbizon.github.io/newsletter_signup/", github: "https://github.com/mateuszbizon/newsletter_signup" },
     { title: "REST countries API", img: "/countries_api.jpg", alt: "countries api app", link: "https://mateuszbizon.github.io/Countries-API/", github: "https://github.com/mateuszbizon/Countries-API" }
 ]
+
+export const REACT_PROJECTS: ProjectType[] = [
+    { title: "Multi-step form", img: "/multi_step_form.jpg", alt: "multi-step form app", link: "https://multi-stepformreact.netlify.app/", github: "https://github.com/mateuszbizon/multi-step-form-react" },
+    { title: "Comments section", img: "/comments_section.jpg", alt: "comments section app", link: "https://comments-section-react.netlify.app/", github: "https://github.com/mateuszbizon/comments_section_react" },
+    { title: "Skarbonka Alanka", img: "/piggy_bank_alanek.jpg", alt: "skarbonka alanka app", link: "https://skarbonkaalanka.netlify.app/", github: "https://github.com/mateuszbizon/skarbonka_alanka" }
+]
