@@ -1,8 +1,10 @@
 import React from 'react'
+import ProjectsContainer from './ProjectsContainer'
+import { NEXTJS_PROJECTS } from '@/constants'
 
 function NextJsProjects() {
   return (
-    <div>NextJsProjects</div>
+    <ProjectsContainer projects={NEXTJS_PROJECTS} />
   )
 }
 
