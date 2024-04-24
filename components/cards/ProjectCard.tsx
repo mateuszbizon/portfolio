@@ -10,7 +10,7 @@ type Props = {
 function ProjectCard({ project }: Props) {
   return (
     <div className='flex flex-col'>
-        <div className='overflow-hidden rounded-t-xl'>
+        <div className='overflow-hidden rounded-t-xl border border-b-light-3'>
             <Link href={project.link} target="_blank" title="Strona główna projektu">
                 <Image src={project.img} alt={project.alt} width={200} height={200} className='w-full h-full object-cover hover:scale-105 transition-all duration-300' />    
             </Link>
