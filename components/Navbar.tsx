@@ -1,35 +1,18 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { NAV_LINKS } from '@/constants';
 import Link from 'next/link';
+import useScroll from '@/hooks/useScroll';
 
 function Navbar() {
-    const [navShadowActive, setNavShadowActive] = useState(false)
+    const { elementActive } = useScroll(100)
     const [mobileNavLinksActive, setMobileNavLinksActive] = useState(false)
-    const navScrollYOffset = 100;
-
-    function handleScroll() {
-        if (window.scrollY >= navScrollYOffset) {
-            setNavShadowActive(true)
-            return;
-        }
-
-        setNavShadowActive(false);
-    }
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
-    }, [])
 
   return (
     <nav className='fixed top-0 left-0 flex flex-col w-full z-10'>
-        <div className={`flex justify-between items-center text-light-1 main-padding-x py-5 ${navShadowActive ? "bg-primary-1" : "bg-transparent"} transition duration-300`}>
+        <div className={`flex justify-between items-center text-light-1 main-padding-x py-5 ${elementActive ? "bg-primary-1" : "bg-transparent"} transition duration-300`}>
             <span className='font-medium text-lg lg:text-xl'>Mateusz Bizoń</span>
 
             <button className='md:hidden' onClick={() => setMobileNavLinksActive(prev => !prev)}>
