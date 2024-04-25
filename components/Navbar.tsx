@@ -34,7 +34,7 @@ function Navbar() {
             <div className='flex flex-col gap-3 overflow-hidden'>
                 {NAV_LINKS.map(item => {
                     return (
-                        <Link key={item.id} href={`#${item.id}`} className='text-light-1 hover:text-primary-2 transition duration-300'>
+                        <Link key={item.id} href={`#${item.id}`} onClick={() => setMobileNavLinksActive(false)} className='text-light-1 hover:text-primary-2 transition duration-300'>
                             {item.text}
                         </Link>
                     )
