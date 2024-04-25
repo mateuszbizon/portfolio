@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
     .title-1 {
         @apply font-bold text-4xl md:text-5xl lg:text-6xl;
@@ -17,7 +16,7 @@
     }
 
     .main-padding-x {
-        @apply px-8 sm:px-16 md:px-24 lg:px-40;
+        @apply px-8 sm:px-14 lg:px-32;
     }
 
     .section {

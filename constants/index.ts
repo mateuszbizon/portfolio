@@ -25,3 +25,8 @@ export const NEXTJS_PROJECTS: ProjectType[] = [
     { title: "Social media dashboard", img: "/social_media_dashboard.jpg", alt: "social media dashboard app", link: "https://social-media-dashboard-nextjs-two.vercel.app/", github: "https://github.com/mateuszbizon/social_media_dashboard_nextjs" },
     { title: "Piggy bank online", img: "/piggy_bank_online.jpg", alt: "piggy bank online app", link: "https://piggybankonline.vercel.app/", github: "https://github.com/mateuszbizon/piggy_bank_app_nextjs" }
 ]
+
+export const NAV_LINKS = [
+    { text: "O mnie", id: "about" },
+    { text: "Projekty", id: "projects" },
+]
