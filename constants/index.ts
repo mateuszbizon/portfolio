@@ -29,4 +29,5 @@ export const NEXTJS_PROJECTS: ProjectType[] = [
 export const NAV_LINKS = [
     { text: "O mnie", id: "about" },
     { text: "Projekty", id: "projects" },
+    { text: "Mapa", id: "road-map" },
 ]
