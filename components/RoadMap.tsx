@@ -11,7 +11,7 @@ function RoadMap() {
   return (
     <section id='road-map' className='section main-padding-x'>
         <h2 className='title-2 title-margin-bottom'>Plan nauki</h2>
-        <div className='relative w-1 rounded-lg bg-light-3 mx-auto' style={{ height: `${(ROAD_MAP_ITEMS.length * 100) - 100}px` }}>
+        <div className='relative w-1 rounded-lg bg-light-3 mx-auto' style={{ height: `${(ROAD_MAP_ITEMS.length * 100) - 50}px` }}>
             {ROAD_MAP_ITEMS.map((item, index) => {
                 const isElementEven = (index + 1) % 2 == 0 ? true : false;
 
