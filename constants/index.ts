@@ -30,4 +30,5 @@ export const NAV_LINKS = [
     { text: "O mnie", id: "about" },
     { text: "Projekty", id: "projects" },
     { text: "Mapa", id: "road-map" },
+    { text: "Kontakt", id: "contact" },
 ]
