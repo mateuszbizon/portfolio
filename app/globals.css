@@ -34,4 +34,8 @@
     .tooltip-top {
         @apply relative before:absolute before:content-[attr(data-tip)] before:px-4 before:py-2 before:left-1/2 before:-translate-x-1/2 before:-top-20 before:bg-black before:text-light-1 before:rounded-md before:opacity-0 hover:before:opacity-100 hover:before:translate-y-4 before:transition-all before:duration-300 before:pointer-events-none after:absolute after:left-1/2 after:-translate-x-1/2 after:-top-10 after:h-0 after:w-0 after:border-8 after:border-transparent after:border-t-black after:opacity-0 hover:after:opacity-100 hover:after:translate-y-4 after:transition-all after:duration-300 after:pointer-events-none;
     }
+
+    .icon-size {
+        @apply h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6;
+    }
 }
