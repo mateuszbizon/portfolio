@@ -17,7 +17,7 @@ This project is a quick introducing my life in private, in school and in softwar
 
 ### Installation
 
-1. Close the repository
+1. Clone the repository
 
 ```bash
 git clone https://github.com/mateuszbizon/portfolio.git
