@@ -6,7 +6,7 @@ type Props = {
 
 function Container({ children }: Props) {
   return (
-    <div className='w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto'>
+    <div className='w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto'>
         {children}
     </div>
   )
