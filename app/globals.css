@@ -15,10 +15,6 @@
         @apply mb-7 lg:mb-14;
     }
 
-    .main-padding-x {
-        @apply px-8 sm:px-14 lg:px-32;
-    }
-
     .section {
         @apply py-5 sm:py-10 md:py-14 lg:py-20;
     }

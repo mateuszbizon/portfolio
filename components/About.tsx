@@ -1,5 +1,6 @@
 import React from 'react'
 import Accordions from './lists/Accordions'
+import Container from './layouts/Container'
 
 export const ABOUT_ACCORDIONS: AccordionType[] = [
   { title: "Prywatnie", text: "Urodziłem się w Lubaniu, a mieszkam w Jerzmankach (2 km od Zgorzelca) w województwie dolnośląskim. W wolnym czasie układam kostkę Rubika na czas, co jest moją wielką pasją od ponad 5 lat. Wystąpiłem w kilku zawodach, wyciągając przy tym wyniki w okolicach poniżej 18 sekund. <br /><br /> Ponadto uwielbiam słuchać muzyki oraz grać w gry komputerowe, a także - jakby mogło być inaczej, tworzę aplikacje internetowe w różnych celach." },
@@ -9,9 +10,11 @@ export const ABOUT_ACCORDIONS: AccordionType[] = [
 
 function About() {
   return (
-    <section id='about' className='section main-padding-x'>
-        <h2 className='title-2 title-margin-bottom'>O mnie</h2>
-        <Accordions accordions={ABOUT_ACCORDIONS} />
+    <section id='about' className='section'>
+        <Container>
+          <h2 className='title-2 title-margin-bottom'>O mnie</h2>
+          <Accordions accordions={ABOUT_ACCORDIONS} />
+        </Container>
     </section>
   )
 }
