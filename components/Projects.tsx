@@ -1,6 +1,5 @@
 "use client"
 
-import { PROJECTS_BTNS } from '@/constants'
 import React, { useState } from 'react'
 import HtmlProjects from './Projects/HtmlProjects'
 import JavaScriptProjects from './Projects/JavaScriptProjects'
@@ -8,6 +7,8 @@ import ReactProjects from './Projects/ReactProjects'
 import NextJsProjects from './Projects/NextJsProjects'
 
 const PROJECTS = [<HtmlProjects />, <JavaScriptProjects />, <ReactProjects />, <NextJsProjects />]
+
+const PROJECTS_BTNS = ["HTML & CSS", "JavaScript", "React", "Next.js"]
 
 function Projects() {
     const [btnIndex, setBtnIndex] = useState(0)

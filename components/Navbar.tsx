@@ -2,9 +2,15 @@
 
 import React, { useState } from 'react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { NAV_LINKS } from '@/constants';
 import Link from 'next/link';
 import useScroll from '@/hooks/useScroll';
+
+const NAV_LINKS = [
+    { text: "O mnie", id: "about" },
+    { text: "Projekty", id: "projects" },
+    { text: "Mapa", id: "road-map" },
+    { text: "Kontakt", id: "contact" },
+]
 
 function Navbar() {
     const { elementActive } = useScroll(100)
