@@ -13,21 +13,19 @@ type Props = {
 
 function NavbarMobileDropdown({ dropdownActive, setDropdownActive }: Props) {
   return (
-    <div className={`md:hidden grid bg-primary-1 transition-all duration-200 ${dropdownActive ? "grid-rows-[1fr] py-5 opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
-        <div className=''>
-            <Container>
-                <div className='flex flex-col gap-3'>
-                    {NAV_LINKS.map(item => {
-                        return (
-                            <Link key={item.link} href={`#${item.link}`} onClick={() => setDropdownActive(false)} className='navbar-item'>
-                                {item.text}
-                            </Link>
-                        )
-                    })}
-                    <NavbarSkillsItem />
-                </div>
-            </Container>
-        </div>
+    <div className={`md:hidden absolute top-[68px] left-0 w-full py-5 bg-primary-1 ${dropdownActive ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-[-30px] pointer-events-none"} transition-all duration-200 `}>
+        <Container>
+            <div className='flex flex-col gap-3'>
+                {NAV_LINKS.map(item => {
+                    return (
+                        <Link key={item.link} href={`#${item.link}`} onClick={() => setDropdownActive(false)} className='navbar-item'>
+                            {item.text}
+                        </Link>
+                    )
+                })}
+                <NavbarSkillsItem />
+            </div>
+        </Container>
     </div>
   )
 }
