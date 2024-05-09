@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { HomeIcon } from '@heroicons/react/24/solid';
 import GithubIcon from '@/public/icons/GithubIcon';
+import HomeIcon from '@/public/icons/HomeIcon';
 
 type Props = {
     project: ProjectType;
@@ -24,7 +24,7 @@ function ProjectCard({ project }: Props) {
 
             <div className='flex justify-center gap-7'>
                 <Link href={project.link} target='_blank' title="Strona główna projektu" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Strona">
-                    <HomeIcon className='h-6 w-6' />
+                    <HomeIcon />
                     <span className='icon-text'>Strona</span>
                 </Link>
                 
