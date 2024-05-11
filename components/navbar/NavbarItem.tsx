@@ -38,7 +38,7 @@ function NavbarItem({ item, setDropdownActive }: Props) {
                 {item.title}
             </Link>
         ) : (
-            <button ref={buttonRef} className={`relative navbar-item-pointer-up ${itemActive ? "navbar-item-pointer-up-show" : "navbar-item-pointer-up-hide"}`} onClick={() => setItemActive(prev => !prev)}>
+            <button ref={buttonRef} className={`relative ${itemActive && "navbar-item-pointer"}`} onClick={() => setItemActive(prev => !prev)}>
                 <div className={`navbar-item flex gap-2 items-center cursor-pointer ${itemActive && "text-primary-2"}`}>
                     <span className='flex gap-2 items-center'>Umiejętności</span>
                     <div className={`${itemActive ? "rotate-180" : "rotate-0"} transition-all`}>
@@ -46,7 +46,9 @@ function NavbarItem({ item, setDropdownActive }: Props) {
                     </div>
                 </div>
                 {itemActive && (
-                    item.content
+                    <div className={`absolute top-[150%] left-0 md:right-0 md:left-auto p-5 bg-light-1 w-[300px] sm:w-[500px] transition-all duration-300 z-10 pointer-events-none rounded-lg`}>
+                        {item.content}
+                    </div>
                 )}
             </button>
         )}

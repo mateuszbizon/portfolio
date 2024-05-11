@@ -16,15 +16,13 @@ const SKILLS_LIST = [
 
 function NavbarSkillsItem() {
   return (
-    <div className={`absolute top-[150%] left-0 md:right-0 md:left-auto p-5 bg-light-1 w-[300px] sm:w-[500px] transition-all duration-300 z-10 pointer-events-none rounded-lg`}>
-        <ul className='grid grid-cols-3 gap-5 text-black'>
-          {SKILLS_LIST.map(item => {
-            return (
-              <li key={item.name}>{item.name}</li>
-            )
-          })}
-        </ul>
-    </div>
+    <ul className='grid grid-cols-3 gap-5 text-black'>
+      {SKILLS_LIST.map(item => {
+        return (
+          <li key={item.name}>{item.name}</li>
+        )
+      })}
+    </ul>
   )
 }
 
