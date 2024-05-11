@@ -12,7 +12,7 @@ function Header() {
         <Container>
           <div className='flex flex-col sm:flex-row h-full'>
             <div className='flex flex-col justify-end sm:justify-center h-[50%] sm:w-[50%] sm:h-auto'>
-              <motion.h1 className='title-1 text-light-1 text-center' initial={{ x: -500, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>Cześć! Jestem <span className='text-primary-2'>Mateusz</span> <br />Programista front-end</motion.h1>
+              <motion.h1 className='title-1 text-light-1 text-center' initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>Cześć! Jestem <span className='text-primary-2'>Mateusz</span> <br />Programista front-end</motion.h1>
             </div>
 
             <div className='flex justify-center sm:items-center pt-10 sm:pt-0 h-[50%] sm:w-[50%] sm:h-auto'>
