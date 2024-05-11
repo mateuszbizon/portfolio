@@ -5,12 +5,14 @@ import useScroll from '@/hooks/useScroll';
 import Container from '../layouts/Container';
 import NavbarContent from './NavbarContent';
 import NavbarMobileDropdown from './NavbarMobileDropdown';
+import NavbarSkillsItem from './NavbarSkillsItem';
 
 export const NAV_LINKS = [
-    { text: "O mnie", link: "about" },
-    { text: "Projekty", link: "projects" },
-    { text: "Mapa", link: "road-map" },
-    { text: "Kontakt", link: "contact" },
+    { title: "O mnie", href: "about" },
+    { title: "Projekty", href: "projects" },
+    { title: "Mapa", href: "road-map" },
+    { title: "Kontakt", href: "contact" },
+    { title: "Umiejętności", href: "", content: <NavbarSkillsItem /> },
 ]
 
 function Navbar() {

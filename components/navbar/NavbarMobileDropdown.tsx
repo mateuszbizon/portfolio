@@ -2,9 +2,8 @@
 
 import React from 'react'
 import { NAV_LINKS } from './Navbar';
-import Link from 'next/link';
 import Container from '../layouts/Container';
-import NavbarSkillsItem from './NavbarSkillsItem';
+import NavbarItem from './NavbarItem';
 
 type Props = {
     dropdownActive: boolean;
@@ -18,12 +17,9 @@ function NavbarMobileDropdown({ dropdownActive, setDropdownActive }: Props) {
             <div className='flex flex-col gap-3'>
                 {NAV_LINKS.map(item => {
                     return (
-                        <Link key={item.link} href={`#${item.link}`} onClick={() => setDropdownActive(false)} className='navbar-item'>
-                            {item.text}
-                        </Link>
+                        <NavbarItem key={item.title} item={item} setDropdownActive={setDropdownActive} />
                     )
                 })}
-                <NavbarSkillsItem />
             </div>
         </Container>
     </div>
