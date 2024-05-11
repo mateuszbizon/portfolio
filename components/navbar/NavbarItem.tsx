@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from 'react'
 type Props = {
     item: {
         title: string;
-        href: string;
+        href?: string;
         content?: React.ReactNode;
     }
     setDropdownActive: React.Dispatch<React.SetStateAction<boolean>>;

@@ -11,7 +11,7 @@ const NAV_ITEMS = [
     { title: "Projekty", href: "projects" },
     { title: "Mapa", href: "road-map" },
     { title: "Kontakt", href: "contact" },
-    { title: "Umiejętności", href: "", content: <NavbarSkillsItem /> },
+    { title: "Umiejętności", content: <NavbarSkillsItem /> },
 ]
 
 function NavbarItems({ setDropdownActive }: Props) {
