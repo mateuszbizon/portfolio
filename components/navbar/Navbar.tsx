@@ -5,15 +5,6 @@ import useScroll from '@/hooks/useScroll';
 import Container from '../layouts/Container';
 import NavbarContent from './NavbarContent';
 import NavbarMobileDropdown from './NavbarMobileDropdown';
-import NavbarSkillsItem from './NavbarSkillsItem';
-
-export const NAV_LINKS = [
-    { title: "O mnie", href: "about" },
-    { title: "Projekty", href: "projects" },
-    { title: "Mapa", href: "road-map" },
-    { title: "Kontakt", href: "contact" },
-    { title: "Umiejętności", href: "", content: <NavbarSkillsItem /> },
-]
 
 function Navbar() {
     const { elementActive } = useScroll(100)

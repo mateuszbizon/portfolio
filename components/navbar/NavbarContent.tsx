@@ -2,8 +2,7 @@
 
 import React from 'react'
 import MenuBarsIcon from '@/public/icons/MenuBarsIcon';
-import { NAV_LINKS } from './Navbar';
-import NavbarItem from './NavbarItem';
+import NavbarItems from './NavbarItems';
 
 type Props = {
     setDropdownActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,11 +15,7 @@ function NavbarContent({ setDropdownActive, dropdownActive }: Props) {
         <span className='font-medium text-lg lg:text-xl'>Mateusz Bizoń</span>
 
         <div className='hidden md:flex gap-8 md:text-lg lg:text-xl'>
-            {NAV_LINKS.map(item => {
-                return (
-                    <NavbarItem key={item.title} item={item} setDropdownActive={setDropdownActive} />
-                )
-            })}
+            <NavbarItems setDropdownActive={setDropdownActive} />
         </div>
 
         <button className='md:hidden' onClick={() => setDropdownActive(prev => !prev)}>
