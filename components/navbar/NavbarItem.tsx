@@ -15,19 +15,20 @@ type Props = {
 
 function NavbarItem({ item, setDropdownActive }: Props) {
     const [itemActive, setItemActive] = useState(false)
-    const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    function closeSkillsItemOutside(event: MouseEvent) {
-      if (buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
-        setItemActive(false)
-      }
+    function closeActiveItem(e: any) {
+      const isDropdownButton = e.target.matches("[data-dropdown-button]")
+      
+      if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
+
+      setItemActive(false);
     }
 
-    document.addEventListener("click", closeSkillsItemOutside)
+    document.addEventListener("click", closeActiveItem)
     
     return () => {
-      document.removeEventListener("click", closeSkillsItemOutside)
+      document.removeEventListener("click", closeActiveItem)
     }
   }, [])
 
@@ -38,19 +39,19 @@ function NavbarItem({ item, setDropdownActive }: Props) {
                 {item.title}
             </Link>
         ) : (
-            <button ref={buttonRef} className={`relative ${itemActive && "navbar-item-pointer"}`} onClick={() => setItemActive(prev => !prev)}>
-                <div className={`navbar-item flex gap-2 items-center cursor-pointer ${itemActive && "text-primary-2"}`}>
+            <div className={`relative ${itemActive && "navbar-item-pointer"}`} data-dropdown>
+                <button className={`navbar-item flex gap-2 items-center cursor-pointer ${itemActive && "text-primary-2"}`} onClick={() => setItemActive(prev => !prev)} data-dropdown-button>
                     <span className='flex gap-2 items-center'>Umiejętności</span>
                     <div className={`${itemActive ? "rotate-180" : "rotate-0"} transition-all`}>
-                    <ChevronDownIcon />
+                      <ChevronDownIcon />
                     </div>
-                </div>
+                </button>
                 {itemActive && (
-                    <div className={`absolute top-[150%] left-0 md:right-0 md:left-auto p-5 bg-light-1 w-[300px] sm:w-[500px] transition-all duration-300 z-10 pointer-events-none rounded-lg`}>
+                    <div className={`absolute top-[150%] left-0 md:right-0 md:left-auto p-5 bg-light-1 w-[300px] sm:w-[500px] transition-all duration-300 z-10 rounded-lg`}>
                         {item.content}
                     </div>
                 )}
-            </button>
+            </div>
         )}
     </>
   )
