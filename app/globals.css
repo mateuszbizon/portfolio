@@ -40,6 +40,6 @@
     }
 
     .navbar-item-pointer {
-        @apply after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-3 md:after:-bottom-[14px] after:h-0 after:w-0 after:border-8 after:border-transparent after:border-b-light-1 after:pointer-events-none;
+        @apply after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-3 md:after:-bottom-[14px] after:h-0 after:w-0 after:border-8 after:border-transparent after:border-b-light-1 after:pointer-events-none after:transition-all;
     }
 }
