@@ -5,14 +5,20 @@ import { motion } from 'framer-motion'
 import Container from './layouts/Container'
 import profileImg from "../public/profile_photo.jpg";
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Header() {
   return (
     <header id='header' className='h-screen bg-gradient-to-br from-primary-1 to-secondary-1'>
         <Container>
-          <div className='flex flex-col sm:flex-row h-full'>
-            <div className='flex flex-col justify-end sm:justify-center h-[50%] sm:w-[50%] sm:h-auto'>
+          <div className='flex flex-col sm:flex-row h-full pt-10 sm:pt-0'>
+            <div className='flex flex-col gap-5 justify-end sm:justify-center h-[50%] sm:w-[50%] sm:h-auto'>
               <motion.h1 className='title-1 text-light-1 text-center' initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>Hi! My name is <span className='text-primary-2'>Matthew</span> <br />front-end developer</motion.h1>
+              <div className='flex justify-center'>
+                <Link className='btn-2 rounded-md' href={"/CV_Mateusz_Bizoń_developer.pdf"} download>
+                  Download CV
+                </Link>
+              </div>
             </div>
 
             <div className='flex justify-center sm:items-center pt-10 sm:pt-0 h-[50%] sm:w-[50%] sm:h-auto'>

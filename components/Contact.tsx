@@ -24,7 +24,7 @@ function Contact() {
           <div className='flex gap-5 justify-center'>
             {LINKS.map(link => {
               return (
-                <Link key={link.name} href={link.link} target='_blank' title={link.name} className='bg-light-1 text-black text-base p-3 md:p-4 rounded-full hover:bg-primary-2 hover:text-light-1 transition duration-300 tooltip-top' data-tip={link.name}>
+                <Link key={link.name} href={link.link} target='_blank' title={link.name} className='btn-1 rounded-full tooltip-top' data-tip={link.name}>
                   {link.icon}
                 </Link>
               )
