@@ -2,7 +2,7 @@
 
 import ChevronDownIcon from '@/public/icons/ChevronDownIcon';
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 type Props = {
     item: {
@@ -41,7 +41,7 @@ function NavbarItem({ item, setDropdownActive }: Props) {
         ) : (
             <div className={`relative navbar-item-pointer ${itemActive ? "after:opacity-100" : "after:opacity-0"}`} data-dropdown>
                 <button className={`navbar-item flex gap-2 items-center cursor-pointer ${itemActive && "text-primary-2"}`} onClick={() => setItemActive(prev => !prev)} data-dropdown-button>
-                    <span className='flex gap-2 items-center'>Umiejętności</span>
+                    <span className='flex gap-2 items-center'>{item.title}</span>
                     <div className={`${itemActive ? "rotate-180" : "rotate-0"} transition-all`}>
                       <ChevronDownIcon />
                     </div>

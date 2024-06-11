@@ -7,11 +7,11 @@ type Props = {
 }
 
 const NAV_ITEMS = [
-    { title: "O mnie", href: "about" },
-    { title: "Projekty", href: "projects" },
-    { title: "Mapa", href: "road-map" },
-    { title: "Kontakt", href: "contact" },
-    { title: "Umiejętności", content: <NavbarSkillsItem /> },
+    { title: "About", href: "about" },
+    { title: "Projects", href: "projects" },
+    { title: "Road-map", href: "road-map" },
+    { title: "Contact", href: "contact" },
+    { title: "Skills", content: <NavbarSkillsItem /> },
 ]
 
 function NavbarItems({ setDropdownActive }: Props) {

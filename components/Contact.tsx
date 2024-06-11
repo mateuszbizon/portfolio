@@ -13,14 +13,14 @@ function Contact() {
   return (
     <section id='contact' className='section bg-primary-1 text-light-1 text-2xl md:text-3xl'>
         <Container>
-          <h2 className='title-2 title-margin-bottom text-center'>Kontakt</h2>
-          <p className='text-center mb-8'>Jeśli chcesz wysłać do mnie wiadomość, wyślij ją na <br /> <Link href="mailto:mat-biz@wp.pl" className='text-primary-2 font-bold hover:text-light-1 hover:underline transition-all duration-300'>mat-biz@wp.pl</Link></p>
+          <h2 className='title-2 title-margin-bottom text-center'>Contact</h2>
+          <p className='text-center mb-8'>If you want to send me message, do it at <br /> <Link href="mailto:mat-biz@wp.pl" className='text-primary-2 font-bold hover:text-light-1 hover:underline transition-all duration-300'>mat-biz@wp.pl</Link></p>
           <div className='flex items-center gap-4 w-full max-w-[300px] mx-auto mb-8'>
               <div className='bg-light-1 w-[50%] h-1'></div>
-              <span>albo</span>
+              <span>or</span>
               <div className='bg-light-1 w-[50%] h-1'></div>
           </div>
-          <p className='text-center mb-5'>Odwiedź mnie na:</p>
+          <p className='text-center mb-5'>Visit me at:</p>
           <div className='flex gap-5 justify-center'>
             {LINKS.map(link => {
               return (

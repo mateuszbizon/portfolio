@@ -17,7 +17,7 @@ function Projects() {
   return (
     <section id='projects' className='main-padding-x section bg-light-3'>
         <Container>
-            <h2 className='title-2 title-margin-bottom'>Projekty</h2>
+            <h2 className='title-2 title-margin-bottom'>Projects</h2>
             <div className='flex gap-5 overflow-auto mb-10'>
                 {PROJECTS_BTNS.map((btnText, index) => {
                     const isActive = btnIndex == index ? true : false;

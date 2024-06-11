@@ -12,7 +12,7 @@ function RoadMap() {
   return (
     <section id='road-map' className='section main-padding-x'>
         <Container>
-            <h2 className='title-2 title-margin-bottom'>Plan nauki</h2>
+            <h2 className='title-2 title-margin-bottom'>Road-map</h2>
             <div className='relative w-1 rounded-lg bg-light-3 mx-auto' style={{ height: `${(ROAD_MAP_ITEMS.length * 100) - 50}px` }}>
                 {ROAD_MAP_ITEMS.map((item, index) => {
                     const isElementEven = (index + 1) % 2 == 0 ? true : false;
@@ -28,7 +28,7 @@ function RoadMap() {
 
                                 {item === learningElement && (
                                     <motion.div className={`absolute top-0 ${isElementEven ? "-right-24 sm:-right-28" : "-left-24 sm:-left-28"} px-4 py-2 w-min text-center text-primary-2 font-medium bg-light-1 border border-primary-1 rounded-lg`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3, repeat: Infinity }}>
-                                        Jestem tutaj!
+                                        I am here!
                                     </motion.div>
                                 )}
                             </div>

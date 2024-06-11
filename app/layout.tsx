@@ -10,7 +10,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Mateusz Bizoń - Portfolio | Web Developer",
-  description: "Portfolio programisty z doświadczeniem w tworzeniu stron internetowych i aplikacji webowych",
+  description: "Portfolio of a programmer with experience in creating websites and web applications.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className={roboto.className}>{children}</body>
     </html>
   );
