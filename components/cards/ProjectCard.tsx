@@ -12,23 +12,25 @@ function ProjectCard({ project }: Props) {
   return (
     <div className='flex flex-col'>
         <div className='overflow-hidden rounded-t-xl border border-b-light-3'>
-            <Link href={project.link} target="_blank" title="Strona główna projektu">
+            <Link href={project.link} target="_blank" title="Project page">
                 <Image src={project.img} alt={project.alt} width={200} height={200} className='w-full h-full object-cover hover:scale-105 transition-all duration-300' />    
             </Link>
         </div>
 
         <div className='flex flex-col p-5 bg-light-1 rounded-b-xl'>
-            <Link href={project.link} target='_blank' title="Strona główna projektu" className='text-lg md:text-xl xl:text-2xl font-medium mb-5'>
-                <span>{project.title}</span>
-            </Link>
+            <div className='mb-5'>
+                <Link href={project.link} target='_blank' title="Project page" className='text-lg md:text-xl xl:text-2xl font-medium'>
+                    <span>{project.title}</span>
+                </Link>
+            </div>
 
             <div className='flex justify-center gap-7'>
-                <Link href={project.link} target='_blank' title="Strona główna projektu" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Strona">
+                <Link href={project.link} target='_blank' title="Project page" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Page">
                     <HomeIcon />
-                    <span className='icon-text'>Strona</span>
+                    <span className='icon-text'>Page</span>
                 </Link>
                 
-                <Link href={project.github} target='_blank' title="Github projektu" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Github">
+                <Link href={project.github} target='_blank' title="Project github" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Github">
                     <GithubIcon />
                     <span className='icon-text'>Github</span>
                 </Link>
