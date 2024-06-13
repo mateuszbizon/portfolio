@@ -50,4 +50,8 @@
     .btn-2 {
         @apply bg-primary-2 text-light-1 text-base py-3 px-5 border-2 border-primary-2 hover:bg-primary-1 hover:text-light-1 transition duration-300
     }
+
+    .technology-item {
+        @apply font-bold md:text-lg
+    }
 }

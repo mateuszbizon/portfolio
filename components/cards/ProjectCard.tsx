@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React from 'react'
 import GithubIcon from '@/public/icons/GithubIcon';
 import HomeIcon from '@/public/icons/HomeIcon';
+import { technologyMap } from '@/utils/technologyMap';
+import { ProjectType } from '@/types';
 
 type Props = {
     project: ProjectType;
@@ -24,7 +26,7 @@ function ProjectCard({ project }: Props) {
                 </Link>
             </div>
 
-            <div className='flex justify-center gap-7'>
+            <div className='flex justify-center gap-7 mb-5'>
                 <Link href={project.link} target='_blank' title="Project page" className='flex flex-col items-center gap-1 hover:text-primary-2 transition tooltip-top' data-tip="Page">
                     <HomeIcon />
                     <span className='icon-text'>Page</span>
@@ -34,6 +36,18 @@ function ProjectCard({ project }: Props) {
                     <GithubIcon />
                     <span className='icon-text'>Github</span>
                 </Link>
+            </div>
+
+        <div>
+            <p className='md:text-lg mb-2 font-medium'>Technologies used:</p>
+            <div className='flex flex-wrap gap-3'>
+                    {project.technologies.map((item) => {
+                        const TechComponent = technologyMap[item];
+                        return (
+                            <TechComponent key={item} />
+                        )
+                    })}
+                </div>
             </div>
         </div>
     </div>
