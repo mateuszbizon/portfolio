@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Header />
+      {/* <Header />
       <main>
         <About />
         <Projects />
@@ -19,7 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <BackToStart />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

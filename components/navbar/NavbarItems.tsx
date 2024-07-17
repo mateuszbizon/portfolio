@@ -1,5 +1,4 @@
 import React from 'react'
-import NavbarSkillsItem from './NavbarSkillsItem'
 import NavbarItem from './NavbarItem'
 
 type Props = {
@@ -7,11 +6,11 @@ type Props = {
 }
 
 const NAV_ITEMS = [
+    { title: "Home", href: "home" },
     { title: "About", href: "about" },
     { title: "Projects", href: "projects" },
-    { title: "Road-map", href: "road-map" },
     { title: "Contact", href: "contact" },
-    { title: "Skills", content: <NavbarSkillsItem /> },
+    { title: "Skills", href: "skills" },
 ]
 
 function NavbarItems({ setDropdownActive }: Props) {
