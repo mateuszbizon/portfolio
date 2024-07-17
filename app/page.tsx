@@ -11,14 +11,16 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* <Header />
       <main>
-        <About />
+        <div className="container-1 flex">
+          <Header />
+        </div>
+        {/* <About />
         <Projects />
         <RoadMap />
-        <Contact />
+        <Contact /> */}
       </main>
-      <BackToStart />
+      {/* <BackToStart />
       <Footer /> */}
     </>
   );

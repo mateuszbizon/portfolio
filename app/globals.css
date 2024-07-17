@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    --a: #e9c2ff;
+}
 
 @layer components {
     .container-1 {
@@ -10,14 +13,37 @@
     .icon-size {
         @apply h-5 w-5 md:h-6 md:w-6;
     }
-    
-    /* .title-1 {
+
+    .icon-size-btn {
+        @apply h-4 w-4;
+    }
+
+    .title-1 {
         @apply font-bold text-4xl md:text-5xl lg:text-6xl;
     }
 
     .title-2 {
         @apply font-bold text-3xl md:text-4xl lg:text-5xl;
     }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-primary-1 to-primary-2 bg-clip-text text-transparent
+    }
+
+    .btn-1 {
+        @apply flex gap-2 items-center py-2 px-4 text-dark-1 border border-grey-1 rounded-2xl hover:text-grey-1 transition duration-300
+    }
+
+    .btn-1-circle {
+        @apply p-3 text-dark-1 border border-grey-1 rounded-full hover:text-grey-1 transition duration-300
+    }
+
+    .btn-2 {
+        @apply flex gap-2 items-center text-grey-1 hover:text-dark-1 transition duration-300
+    }
+
+
+    /*
 
     .title-margin-bottom {
         @apply mb-7 lg:mb-14;

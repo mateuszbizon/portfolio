@@ -1,33 +1,28 @@
 "use client"
 
 import React from 'react'
-import { motion } from 'framer-motion'
-import Container from './layouts/Container'
-import profileImg from "../public/profile_photo.jpg";
-import Image from 'next/image';
 import Link from 'next/link';
+import ChevronDownIcon from '@/public/icons/ChevronDownIcon';
+import BriefCaseIcon from '@/public/icons/BriefCaseIcon';
+import DownloadIcon from '@/public/icons/DownloadIcon';
 
 function Header() {
   return (
-    <header id='header' className='h-screen bg-gradient-to-br from-primary-1 to-secondary-1'>
-        <Container>
-          <div className='flex flex-col sm:flex-row h-full pt-10 sm:pt-0'>
-            <div className='flex flex-col gap-5 justify-end sm:justify-center h-[50%] sm:w-[50%] sm:h-auto'>
-              <motion.h1 className='title-1 text-light-1 text-center' initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>Hi! My name is <span className='text-primary-2'>Matthew</span> <br />front-end developer</motion.h1>
-              <div className='flex justify-center'>
-                <Link className='btn-2 rounded-md' href={"/CV_Mateusz_Bizoń_developer.pdf"} download>
-                  Download CV
-                </Link>
-              </div>
-            </div>
-
-            <div className='flex justify-center sm:items-center pt-10 sm:pt-0 h-[50%] sm:w-[50%] sm:h-auto'>
-              <figure className='w-[150px] h-[150px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] xl:w-[300px] xl:h-[300px]'>
-                <Image src={profileImg} alt='my photo' width={200} height={200} className='w-full h-full object-cover rounded-full shadow-md shadow-primary-2' />
-              </figure>
-            </div>
+    <header id='home' className='flex flex-col w-full justify-center gap-7 h-screen pb-5'>
+        <div>
+          <h1 className='title-1 gradient-text mb-8 text-center'>I'm Matthew Bizoń <br />Front-end developer</h1>
+          <div className='flex justify-center items-center gap-5'>
+            <Link href={"#projects"} className='btn-1'>
+              My Works <div className='icon-size-btn'><BriefCaseIcon /></div>
+            </Link>
+            <Link href={"/CV_Mateusz_Bizoń_developer.pdf"} className='btn-2' download>
+              Download CV <div className='icon-size-btn'><DownloadIcon /></div>
+            </Link>
           </div>
-        </Container>
+        </div>
+        <Link href={"#about"} className='btn-1-circle w-max p-6 mx-auto'>
+          <div className='icon-size'><ChevronDownIcon /></div>
+        </Link>
     </header>
   )
 }
