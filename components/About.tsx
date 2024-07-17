@@ -1,6 +1,5 @@
 import React from 'react'
 import Accordions from './lists/Accordions'
-import Container from './layouts/Container'
 import { AccordionType } from '@/types'
 
 export const ABOUT_ACCORDIONS: AccordionType[] = [
@@ -12,10 +11,8 @@ export const ABOUT_ACCORDIONS: AccordionType[] = [
 function About() {
   return (
     <section id='about' className='section'>
-        <Container>
-          <h2 className='title-2 title-margin-bottom'>About</h2>
-          <Accordions accordions={ABOUT_ACCORDIONS} />
-        </Container>
+      <h2 className='title-2 title-margin-bottom'>About</h2>
+      <Accordions accordions={ABOUT_ACCORDIONS} />
     </section>
   )
 }
