@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <div className="container-1 flex">
           <AsideHeader />
-          <div className="px-10 w-[calc(100%-250px)]">
+          <div className="lg:px-10 w-full lg:w-[calc(100%-250px)]">
             <Header />
           </div>
         </div>
