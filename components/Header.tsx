@@ -8,7 +8,7 @@ import DownloadIcon from '@/public/icons/DownloadIcon';
 
 function Header() {
   return (
-    <header id='home' className='flex flex-col w-full justify-center lg:flex-row lg:justify-between lg:items-end gap-7 h-screen pb-[calc(40px+theme(padding.navbar-padding-y))]'>
+    <header id='home' className='flex flex-col w-full justify-center lg:flex-row lg:justify-between lg:items-end gap-7 h-screen pb-[calc(theme(padding.aside-header-padding)+theme(padding.navbar-padding-y))]'>
         <div>
           <h1 className='title-1 gradient-text mb-8 text-center lg:text-left'>I'm Matthew Bizoń <br />Front-end developer</h1>
           <div className='flex justify-center items-center lg:justify-start gap-5'>

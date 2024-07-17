@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-    --a: #e9c2ff;
+    --a: #988da5;
 }
 
 @layer components {

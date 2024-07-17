@@ -18,7 +18,7 @@ const config: Config = {
         "light-1": "#fff",
         "light-2": "#FCF7FF",
         "light-3": "#DDF1F9",
-        "grey-1": "#B0A8BA",
+        "grey-1": "#988da5",
         "dark-1": "#4A4453",
       },
       height: {
@@ -28,7 +28,8 @@ const config: Config = {
         "aside-header-width": "250px",
       },
       padding: {
-        "navbar-padding-y": "20px"
+        "navbar-padding-y": "20px",
+        "aside-header-padding": "20px",
       },
     },
   },
