@@ -7,10 +7,10 @@ type Props = {
 
 const NAV_ITEMS = [
     { title: "Home", href: "home" },
-    { title: "About", href: "about" },
+    { title: "About Me", href: "about" },
     { title: "Projects", href: "projects" },
-    { title: "Contact", href: "contact" },
     { title: "Skills", href: "skills" },
+    { title: "Contact", href: "contact" },
 ]
 
 function NavbarItems({ setDropdownActive }: Props) {
