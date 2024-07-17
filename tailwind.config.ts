@@ -17,12 +17,18 @@ const config: Config = {
         "yellow-1": "#E0CA3C",
         "light-1": "#fff",
         "light-2": "#FCF7FF",
-        "light-3": "#ECF0FA",
+        "light-3": "#DDF1F9",
         "grey-1": "#B0A8BA",
         "dark-1": "#4A4453",
       },
       height: {
         "navbar-height": "70px",
+      },
+      width: {
+        "aside-header-width": "250px",
+      },
+      padding: {
+        "navbar-padding-y": "20px"
       },
     },
   },

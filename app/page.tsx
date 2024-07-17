@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import AsideHeader from "@/components/AsideHeader";
 import BackToStart from "@/components/BackToStart";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -13,7 +14,10 @@ export default function Home() {
       <Navbar />
       <main>
         <div className="container-1 flex">
-          <Header />
+          <AsideHeader />
+          <div className="px-10 w-[calc(100%-250px)]">
+            <Header />
+          </div>
         </div>
         {/* <About />
         <Projects />

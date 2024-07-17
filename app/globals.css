@@ -7,7 +7,7 @@
 
 @layer components {
     .container-1 {
-        @apply w-[90%] lg:w-[80%] xl:w-[75%] mx-auto h-full;
+        @apply w-[90%] lg:w-[85%] mx-auto;
     }
 
     .icon-size {
