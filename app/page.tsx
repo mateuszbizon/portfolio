@@ -4,6 +4,7 @@ import BackToStart from "@/components/BackToStart";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HeaderElements from "@/components/HeaderElements";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/Projects";
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <HeaderElements />
       <main>
         <div className="container-1 flex">
           <AsideHeader />
