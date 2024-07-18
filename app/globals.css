@@ -10,6 +10,10 @@
         @apply w-[90%] lg:w-[85%] mx-auto;
     }
 
+    .container-2 {
+        @apply bg-light-2 border border-grey-1/30 rounded-2xl p-aside-header-padding
+    }
+
     .icon-size {
         @apply h-5 w-5 md:h-6 md:w-6;
     }
@@ -24,6 +28,14 @@
 
     .title-2 {
         @apply font-bold text-3xl md:text-4xl lg:text-5xl;
+    }
+
+    .title-3 {
+        @apply font-bold text-2xl md:text-3xl lg:text-4xl;
+    }
+
+    .title-margin-bottom {
+        @apply mb-7 lg:mb-10;
     }
 
     .gradient-text {
@@ -42,16 +54,11 @@
         @apply flex gap-2 items-center text-grey-1 hover:text-dark-1 transition duration-300
     }
 
+    .section {
+        @apply py-[calc(30px+theme(height.navbar-height))];
+    }
 
     /*
-
-    .title-margin-bottom {
-        @apply mb-7 lg:mb-14;
-    }
-
-    .section {
-        @apply py-5 sm:py-10 md:py-14 lg:py-20;
-    }
 
     .projects-container {
         @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;

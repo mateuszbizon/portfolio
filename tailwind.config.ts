@@ -29,7 +29,7 @@ const config: Config = {
       },
       padding: {
         "navbar-padding-y": "20px",
-        "aside-header-padding": "20px",
+        "aside-header-padding": "1.25rem",
       },
     },
   },

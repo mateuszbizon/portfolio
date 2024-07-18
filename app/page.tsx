@@ -18,9 +18,10 @@ export default function Home() {
           <AsideHeader />
           <div className="lg:px-10 w-full lg:w-[calc(100%-250px)]">
             <Header />
+            <About />
           </div>
         </div>
-        {/* <About />
+        {/*
         <Projects />
         <Contact /> */}
       </main>

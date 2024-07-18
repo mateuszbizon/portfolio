@@ -7,7 +7,7 @@ import React from 'react'
 function AsideHeader() {
   return (
     <aside className='hidden lg:block w-aside-header-width sticky top-0 h-screen py-navbar-padding-y z-20'>
-        <div className='bg-light-2 border border-grey-1/30 rounded-2xl w-full h-full p-aside-header-padding'>
+        <div className='container-2 w-full h-full'>
           <div className='space-y-3 h-1/2'>
             <div className='text-dark-1 text-2xl font-medium'>
               <p>Mateusz</p>
