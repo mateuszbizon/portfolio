@@ -16,7 +16,7 @@ function ProjectCard({ project }: Props) {
             <Link href={project.link} target="_blank" title="Project page">
                 <Image src={project.img} alt={project.alt} width={200} height={200} className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300' />    
             </Link>
-            <div className='absolute bottom-2 left-2 py-2 px-4 bg-primary-1 text-light-1 z-10 rounded-lg text-xs md:text-sm'>
+            <div className='absolute bottom-2 left-2 py-2 px-4 bg-primary-1 text-light-1 rounded-lg text-xs md:text-sm'>
                 {project.isFullstack ? "Full-stack app" : "Front-end"}
             </div>
         </div>
