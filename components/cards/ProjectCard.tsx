@@ -11,8 +11,8 @@ type Props = {
 
 function ProjectCard({ project }: Props) {
   return (
-    <div className='group flex flex-col'>
-        <div className='relative w-full aspect-auto overflow-hidden rounded-t-xl border border-b-light-3'>
+    <div className='group flex flex-col border border-grey-1/30 rounded-xl'>
+        <div className='relative w-full aspect-auto overflow-hidden rounded-t-xl'>
             <Link href={project.link} target="_blank" title="Project page">
                 <Image src={project.img} alt={project.alt} width={200} height={200} className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300' />    
             </Link>
