@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import HeaderElements from "@/components/HeaderElements";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
             <Header />
             <About />
             <Projects />
+            <Skills />
           </div>
         </div>
         {/*
