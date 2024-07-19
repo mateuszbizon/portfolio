@@ -1,14 +1,3 @@
-export enum Technology {
-    HTML = "html",
-    CSS = "css",
-    SCSS = "scss",
-    JavaScript = "javascript",
-    React = "react",
-    Typescript = "typescript",
-    Tailwind = "tailwind",
-    Nextjs = "nextjs",
-}
-
 export type AccordionType = {
     title: string;
     text: string;
@@ -20,5 +9,10 @@ export type ProjectType = {
     alt: string;
     link: string;
     github: string;
-    technologies: Technology[];
+    technologies: string[];
+    isFullstack: boolean;
+    customIdea?: {
+        title: string;
+        link: string;
+    }
 }

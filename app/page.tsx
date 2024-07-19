@@ -19,10 +19,10 @@ export default function Home() {
           <div className="lg:px-10 w-full lg:w-[calc(100%-250px)]">
             <Header />
             <About />
+            <Projects />
           </div>
         </div>
         {/*
-        <Projects />
         <Contact /> */}
       </main>
       {/* <BackToStart />

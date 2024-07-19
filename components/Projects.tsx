@@ -5,9 +5,9 @@ import ProjectsList from './lists/ProjectsList'
 
 function Projects() {
   return (
-    <section id='projects' className='main-padding-x section bg-light-3'>
-      <h2 className='title-2 title-margin-bottom'>Projects</h2>
-      <div className='w-full flex overflow-hidden'>
+    <section id='projects' className='section'>
+      <h2 className='title-2 title-margin-bottom gradient-text text-center lg:text-left'>Projects</h2>
+      <div>
           <ProjectsList />
       </div>
     </section>

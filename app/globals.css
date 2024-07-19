@@ -43,7 +43,7 @@
     }
 
     .btn-1 {
-        @apply flex gap-2 items-center py-2 px-4 text-dark-1 border border-grey-1 rounded-2xl hover:text-grey-1 transition duration-300
+        @apply flex gap-2 items-center py-2 px-4 text-dark-1 border border-grey-1 rounded-2xl whitespace-nowrap hover:text-grey-1 transition duration-300
     }
 
     .btn-1-circle {
@@ -55,23 +55,10 @@
     }
 
     .section {
-        @apply py-[calc(30px+theme(height.navbar-height))];
+        @apply pt-[calc(30px+theme(height.navbar-height))] pb-5;
     }
 
     /*
-
-    .projects-container {
-        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
-    }
-
-    .icon-text {
-        @apply lg:hidden text-xs;
-    }
-
-    .tooltip-top {
-        @apply relative before:absolute before:content-[attr(data-tip)] before:px-4 before:py-2 before:left-1/2 before:-translate-x-1/2 before:-top-20 before:bg-black before:text-light-1 before:rounded-md before:opacity-0 hover:before:opacity-100 hover:before:translate-y-4 before:transition-all before:duration-300 before:pointer-events-none after:absolute after:left-1/2 after:-translate-x-1/2 after:-top-10 after:h-0 after:w-0 after:border-8 after:border-transparent after:border-t-black after:opacity-0 hover:after:opacity-100 hover:after:translate-y-4 after:transition-all after:duration-300 after:pointer-events-none;
-    }
-
     .navbar-item {
         @apply text-light-1 hover:text-primary-2 transition duration-300;
     }
