@@ -16,7 +16,7 @@ function About() {
           </figure>
         </div>
 
-        <RevealInView>
+        <RevealInView animationType='animate-from-right'>
           <div className='container-2'>
             <h3 className='title-3 mb-5 text-primary-1'>Private</h3>
             <article className='md:text-lg text-dark-1'>
@@ -25,7 +25,7 @@ function About() {
           </div>
         </RevealInView>
 
-        <RevealInView>
+        <RevealInView animationType='animate-from-left'>
           <div className='container-2'>
             <h3 className='title-3 mb-5 text-primary-1'>Experience</h3>
             <article className='md:text-lg text-dark-1 space-y-5'>

@@ -23,3 +23,16 @@ export type SkillType = {
     title: string;
     icon: ReactNode;
 }
+
+export type AnimationInViewType = {
+    hidden: {
+        opacity: number;
+        y?: number;
+        x?: number;
+    }
+    visible: {
+        opacity: number;
+        y?: number;
+        x?: number;
+    }
+}

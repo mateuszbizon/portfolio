@@ -1,13 +1,15 @@
 "use client"
 
+import { getInViewAnimationType } from '@/utils/getInViewAnimationType';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import React, { ReactNode, useEffect, useRef } from 'react'
 
 type Props = {
     children: ReactNode;
+    animationType?: "animate-from-down" | "animate-from-right" | "animate-from-left";
 }
 
-function RevealInView({ children }: Props) {
+function RevealInView({ children, animationType }: Props) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
 
@@ -23,8 +25,8 @@ function RevealInView({ children }: Props) {
     <div ref={ref}>
         <motion.div 
             variants={{
-                hidden: { opacity: 0, y: 75 },
-                visible: { opacity: 1, y: 0 },
+                hidden: animationType ? getInViewAnimationType(animationType).hidden : getInViewAnimationType("animate-from-down").hidden,
+                visible: animationType ? getInViewAnimationType(animationType).visible : getInViewAnimationType("animate-from-down").visible,
             }}
             initial="hidden"
             animate={mainControls}
