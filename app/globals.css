@@ -35,7 +35,7 @@
     }
 
     .title-margin-bottom {
-        @apply mb-7 lg:mb-10;
+        @apply mb-10;
     }
 
     .gradient-text {
