@@ -1,7 +1,11 @@
 import CssColorIcon from "@/public/icons/CssColorIcon"
+import EmailIcon from "@/public/icons/EmailIcon"
 import GitColorIcon from "@/public/icons/GitColorIcon"
+import GithubIcon from "@/public/icons/GithubIcon"
 import HtmlColorIcon from "@/public/icons/HtmlColorIcon"
+import LinkedInIcon from "@/public/icons/LinkedInIcon"
 import NextjsColorIcon from "@/public/icons/NextjsColorIcon"
+import PhoneIcon from "@/public/icons/PhoneIcon"
 import ReactColorIcon from "@/public/icons/ReactColorIcon"
 import SassColorIcon from "@/public/icons/SassColorIcon"
 import TailwindColorIcon from "@/public/icons/TailwindColorIcon"
@@ -33,3 +37,13 @@ export const SKILLS_LIST = [
     { title: "TailwindCSS", icon: TailwindColorIcon(), },
     { title: "Next.js", icon: NextjsColorIcon(), },
 ]
+
+export const CONTACT_INFO_LIST = [
+    { icon: EmailIcon(), text: "mat-biz@wp.pl" },
+    { icon: PhoneIcon(), text: "+48 723 875 386" },
+]
+
+export const SOCIAL_LINKS_LIST = [
+    { name: "Github", link: "https://github.com/mateuszbizon", icon: GithubIcon(), },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/mateusz-bizo%C5%84-ab5672304/", icon: LinkedInIcon(), },
+  ]
