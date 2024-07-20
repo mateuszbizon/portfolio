@@ -1,8 +1,6 @@
 import About from "@/components/About";
 import AsideHeader from "@/components/AsideHeader";
-import BackToStart from "@/components/BackToStart";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeaderElements from "@/components/HeaderElements";
 import Navbar from "@/components/navbar/Navbar";
@@ -25,11 +23,7 @@ export default function Home() {
             <Contact />
           </div>
         </div>
-        {/*
-         */}
       </main>
-      {/* <BackToStart />
-      <Footer /> */}
     </>
   );
 }
