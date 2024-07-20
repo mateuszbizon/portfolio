@@ -57,25 +57,4 @@
     .section {
         @apply pt-[calc(30px+theme(height.navbar-height))] pb-5;
     }
-
-    /*
-    .navbar-item {
-        @apply text-light-1 hover:text-primary-2 transition duration-300;
-    }
-
-    .navbar-item-pointer {
-        @apply after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-3 md:after:-bottom-[14px] after:h-0 after:w-0 after:border-8 after:border-transparent after:border-b-light-1 after:pointer-events-none after:transition-all;
-    }
-
-    .btn-1 {
-        @apply bg-light-1 text-black text-base p-3 md:p-4 hover:bg-primary-2 hover:text-light-1 transition duration-300
-    }
-
-    .btn-2 {
-        @apply bg-primary-2 text-light-1 text-base py-3 px-5 border-2 border-primary-2 hover:bg-primary-1 hover:text-light-1 transition duration-300
-    }
-
-    .technology-item {
-        @apply font-bold md:text-lg
-    } */
 }
