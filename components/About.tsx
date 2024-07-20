@@ -10,11 +10,13 @@ function About() {
         <h2 className='title-2 title-margin-bottom gradient-text text-center lg:text-left'>About Me</h2>
       </RevealInView>
       <div className='space-y-5'>
-        <div className='lg:hidden container-2'>
-          <figure className='w-[200px] h-[200px] mx-auto'>
-            <Image src={"/profile_photo.jpg"} width={200} height={200} alt='photo of the portfolio author' className='w-full h-full object-cover rounded-3xl' />
-          </figure>
-        </div>
+        <RevealInView animationType='animate-from-left'>
+          <div className='lg:hidden container-2'>
+            <figure className='w-[200px] h-[200px] mx-auto'>
+              <Image src={"/profile_photo.jpg"} width={200} height={200} alt='photo of the portfolio author' className='w-full h-full object-cover rounded-3xl' />
+            </figure>
+          </div>
+        </RevealInView>
 
         <RevealInView animationType='animate-from-right'>
           <div className='container-2'>
