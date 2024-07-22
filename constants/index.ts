@@ -13,8 +13,12 @@ import TypescriptColorIcon from "@/public/icons/TypescriptColorIcon"
 import { ProjectType } from "@/types"
 
 export const EXPERIENCE_LIST = [
-    { title: "07/2023 - 08/2023: Sharply, Legnica (Internship)", role: "Front-end, back-end" },
-    { title: "08/2022 - 09/2022: Sharply, Legnica (Internship)", role: "Front-end, back-end" },
+    { title: "second internship", duration: "07/2023 - 08/2023", place: "Sharply, Legnica", role: "Front-end, back-end (Internship)", description: "Second intership in Sharply during I worked more in team. I learned github issues, branches, pull requests and how to solve conflicts in pull request. I also faced to solve other problems. I worked with four other interns. When one of them had problem, first they asked me for help and when I didn't solve problem, it was solved by our keeper. It gave me opportunity to read more code and keep it clean." },
+    { title: "first internship", duration: "08/2022 - 09/2022", place: "Sharply, Legnica", role: "Front-end, back-end (Internship)", description: "First intership in software house during I learned basics of React, how back-end works and how to connect front-end with back-end. While setting connection between front-end and back-end I faced common problem which was CORS, what it is and how to setup CORS. I learned also git with its basic commands and github." },
+]
+
+export const EDUCATION_LIST = [
+    { title: "engineering studies", duration: "10/2020 - 03/2024", place: "Collegium Witelona Uczelnia Panstwowa in Legnica", type: "Computer Science, Engineering Studies", description: "Specialization: Programming web and mobile applications." },
 ]
 
 export const PROJECTS_LIST: ProjectType[] = [
