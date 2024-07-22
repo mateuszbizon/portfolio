@@ -1,5 +1,4 @@
-import GithubIcon from '@/public/icons/GithubIcon'
-import LinkedInIcon from '@/public/icons/LinkedInIcon'
+import { SOCIAL_LINKS_LIST } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -31,12 +30,13 @@ function AsideHeader() {
             </div>
 
             <div className='flex gap-2'>
-              <Link href={"https://github.com/mateuszbizon"} target='_blank' title='Github' className='btn-1-circle'>
-                <div className='icon-size-btn'><GithubIcon /></div>
-              </Link>
-              <Link href={"https://www.linkedin.com/in/mateusz-bizo%C5%84-ab5672304/"} target='_blank' title='LinkedIn' className='btn-1-circle'>
-                <div className='icon-size-btn'><LinkedInIcon /></div>
-              </Link>
+              {SOCIAL_LINKS_LIST.map((item) => {
+                return (
+                  <Link key={item.name} href={item.link} target='_blank' title={item.name} className='btn-1-circle'>
+                    <div className='icon-size-btn'>{item.icon}</div>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
