@@ -1,8 +1,8 @@
+import { CONTACT_INFO_LIST, SOCIAL_LINKS_LIST } from '@/constants'
 import GithubIcon from '@/public/icons/GithubIcon'
 import LinkedInIcon from '@/public/icons/LinkedInIcon'
 import Link from 'next/link'
 import React from 'react'
-import Container from './layouts/Container'
 
 const LINKS = [
   { name: "LinkedIn", link: "https://www.linkedin.com/in/mateusz-bizo%C5%84-ab5672304/", icon: <LinkedInIcon /> },
@@ -11,26 +11,27 @@ const LINKS = [
 
 function Contact() {
   return (
-    <section id='contact' className='section bg-primary-1 text-light-1 text-2xl md:text-3xl'>
-        <Container>
-          <h2 className='title-2 title-margin-bottom text-center'>Contact</h2>
-          <p className='text-center mb-8'>If you want to send me message, do it at <br /> <Link href="mailto:mat-biz@wp.pl" className='text-primary-2 font-bold hover:text-light-1 hover:underline transition-all duration-300'>mat-biz@wp.pl</Link></p>
-          <div className='flex items-center gap-4 w-full max-w-[300px] mx-auto mb-8'>
-              <div className='bg-light-1 w-[50%] h-1'></div>
-              <span>or</span>
-              <div className='bg-light-1 w-[50%] h-1'></div>
-          </div>
-          <p className='text-center mb-5'>Visit me at:</p>
-          <div className='flex gap-5 justify-center'>
-            {LINKS.map(link => {
-              return (
-                <Link key={link.name} href={link.link} target='_blank' title={link.name} className='btn-1 rounded-full tooltip-top' data-tip={link.name}>
-                  {link.icon}
-                </Link>
-              )
-            })}
-          </div>
-        </Container>
+    <section id='contact' className='section'>
+      <h2 className='title-2 title-margin-bottom text-center gradient-text'>Contact</h2>
+      <div className='flex flex-col sm:flex-row sm:justify-center items-center gap-5'>
+        {CONTACT_INFO_LIST.map((item) => {
+          return (
+            <div key={item.text} className='container-2 flex flex-col items-center gap-4 w-[250px] text-dark-1'>
+              <div className='w-7 h-7'>{item.icon}</div>
+              <p className='sm:text-lg'>{item.text}</p>
+            </div>
+          )
+        })}
+      </div>
+      <div className='flex justify-center gap-2 mt-10'>
+        {SOCIAL_LINKS_LIST.map((item) => {
+          return (
+            <Link key={item.name} href={item.link} target='_blank' title={item.name} className='btn-1-circle'>
+              <div className='icon-size-btn sm:icon-size'>{item.icon}</div>
+            </Link>
+          )
+        })}
+      </div>
     </section>
   )
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import Container from '../layouts/Container';
 import NavbarItems from './NavbarItems';
 
 type Props = {
@@ -11,12 +10,12 @@ type Props = {
 
 function NavbarMobileDropdown({ dropdownActive, setDropdownActive }: Props) {
   return (
-    <div className={`md:hidden absolute top-[68px] left-0 w-full py-5 bg-primary-1 ${dropdownActive ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-[-30px] pointer-events-none"} transition-all duration-200 `}>
-        <Container>
-            <div className='flex flex-col gap-3'>
+    <div className={`md:hidden absolute top-[68px] left-0 w-full py-5 bg-light-2 ${dropdownActive ? "translate-y-0 opacity-100 pointer-events-auto" : "opacity-0 translate-y-[-30px] pointer-events-none"} transition-all duration-200 `}>
+        <div className='container-1'>
+            <div className='flex flex-col items-center gap-3'>
                 <NavbarItems setDropdownActive={setDropdownActive} />
             </div>
-        </Container>
+        </div>
     </div>
   )
 }

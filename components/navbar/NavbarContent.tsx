@@ -11,15 +11,15 @@ type Props = {
 
 function NavbarContent({ setDropdownActive, dropdownActive }: Props) {
   return (
-    <div className={`flex justify-between items-center text-light-1 py-5 transition duration-300`}>
-        <span className='font-medium text-lg lg:text-xl'>Mateusz Bizoń</span>
+    <div className={`flex justify-between items-center text-light-1 py-navbar-padding-y lg:pl-[290px] transition duration-300`}>
+        <span className='lg:hidden font-medium text-lg lg:text-xl text-grey-1'>Mateusz Bizoń</span>
 
         <div className='hidden md:flex gap-8 md:text-lg lg:text-xl'>
             <NavbarItems setDropdownActive={setDropdownActive} />
         </div>
 
         <button className='md:hidden' onClick={() => setDropdownActive(prev => !prev)}>
-            <div className={`${dropdownActive ? "text-primary-2" : "text-light-1"} hover:text-primary-2 transition duration-300`}>
+            <div className={`text-grey-1 hover:text-dark-1 transition duration-300`}>
                 <MenuBarsIcon />
             </div>
         </button>

@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import useScroll from '@/hooks/useScroll';
-import Container from '../layouts/Container';
 import NavbarContent from './NavbarContent';
 import NavbarMobileDropdown from './NavbarMobileDropdown';
 
@@ -11,10 +10,10 @@ function Navbar() {
     const [mobileNavLinksActive, setMobileNavLinksActive] = useState(false)
 
   return (
-    <nav className={`fixed top-0 left-0 flex flex-col w-full z-10 ${elementActive ? "bg-primary-1" : "bg-transparent"}`}>
-        <Container>
+    <nav className={`fixed top-0 left-0 flex flex-col w-full h-navbar-height z-10 ${elementActive ? "bg-light-2" : "bg-transparent"} transition duration-300`}>
+        <div className='container-1'>
             <NavbarContent dropdownActive={mobileNavLinksActive} setDropdownActive={setMobileNavLinksActive} />
-        </Container>
+        </div>
         <NavbarMobileDropdown dropdownActive={mobileNavLinksActive} setDropdownActive={setMobileNavLinksActive} />
     </nav>
   )

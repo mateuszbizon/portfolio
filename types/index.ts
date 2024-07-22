@@ -1,13 +1,4 @@
-export enum Technology {
-    HTML = "html",
-    CSS = "css",
-    SCSS = "scss",
-    JavaScript = "javascript",
-    React = "react",
-    Typescript = "typescript",
-    Tailwind = "tailwind",
-    Nextjs = "nextjs",
-}
+import { ReactNode } from "react";
 
 export type AccordionType = {
     title: string;
@@ -20,5 +11,28 @@ export type ProjectType = {
     alt: string;
     link: string;
     github: string;
-    technologies: Technology[];
+    technologies: string[];
+    isFullstack: boolean;
+    customIdea?: {
+        title: string;
+        link: string;
+    }
+}
+
+export type SkillType = {
+    title: string;
+    icon: ReactNode;
+}
+
+export type AnimationInViewType = {
+    hidden: {
+        opacity: number;
+        y?: number;
+        x?: number;
+    }
+    visible: {
+        opacity: number;
+        y?: number;
+        x?: number;
+    }
 }

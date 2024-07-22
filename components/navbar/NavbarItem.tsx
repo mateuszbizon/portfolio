@@ -35,7 +35,7 @@ function NavbarItem({ item, setDropdownActive }: Props) {
   return (
     <>
         {!item.content ? (
-            <Link key={item.href} href={`#${item.href}`} onClick={() => setDropdownActive(false)} className='navbar-item'>
+            <Link key={item.href} href={`#${item.href}`} onClick={() => setDropdownActive(false)} className='text-grey-1 hover:text-dark-1 transition duration-300'>
                 {item.title}
             </Link>
         ) : (

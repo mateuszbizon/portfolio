@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer components {
+    .container-1 {
+        @apply w-[90%] lg:w-[85%] mx-auto;
+    }
+
+    .container-2 {
+        @apply bg-light-2 border border-grey-1/30 rounded-2xl p-aside-header-padding
+    }
+
+    .icon-size {
+        @apply h-5 w-5 md:h-6 md:w-6;
+    }
+
+    .icon-size-btn {
+        @apply h-4 w-4;
+    }
+
     .title-1 {
         @apply font-bold text-4xl md:text-5xl lg:text-6xl;
     }
@@ -11,47 +27,35 @@
         @apply font-bold text-3xl md:text-4xl lg:text-5xl;
     }
 
+    .title-3 {
+        @apply font-bold text-2xl md:text-3xl lg:text-4xl;
+    }
+
     .title-margin-bottom {
-        @apply mb-7 lg:mb-14;
+        @apply mb-10;
     }
 
-    .section {
-        @apply py-5 sm:py-10 md:py-14 lg:py-20;
+    .gradient-text {
+        @apply bg-gradient-to-r from-primary-1 to-primary-2 bg-clip-text text-transparent
     }
 
-    .projects-container {
-        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5;
-    }
-
-    .icon-text {
-        @apply lg:hidden text-xs;
-    }
-
-    .tooltip-top {
-        @apply relative before:absolute before:content-[attr(data-tip)] before:px-4 before:py-2 before:left-1/2 before:-translate-x-1/2 before:-top-20 before:bg-black before:text-light-1 before:rounded-md before:opacity-0 hover:before:opacity-100 hover:before:translate-y-4 before:transition-all before:duration-300 before:pointer-events-none after:absolute after:left-1/2 after:-translate-x-1/2 after:-top-10 after:h-0 after:w-0 after:border-8 after:border-transparent after:border-t-black after:opacity-0 hover:after:opacity-100 hover:after:translate-y-4 after:transition-all after:duration-300 after:pointer-events-none;
-    }
-
-    .icon-size {
-        @apply h-5 w-5 md:h-6 md:w-6;
-    }
-
-    .navbar-item {
-        @apply text-light-1 hover:text-primary-2 transition duration-300;
-    }
-
-    .navbar-item-pointer {
-        @apply after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-3 md:after:-bottom-[14px] after:h-0 after:w-0 after:border-8 after:border-transparent after:border-b-light-1 after:pointer-events-none after:transition-all;
+    .btn-1-common {
+        @apply text-dark-1 border border-grey-1 hover:text-light-1 z-10 overflow-hidden transition duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0 after:-z-10 after:bg-primary-1 hover:after:h-full after:transition-all after:duration-300
     }
 
     .btn-1 {
-        @apply bg-light-1 text-black text-base p-3 md:p-4 hover:bg-primary-2 hover:text-light-1 transition duration-300
+        @apply btn-1-common flex gap-2 items-center py-2 px-4 rounded-2xl whitespace-nowrap
+    }
+
+    .btn-1-circle {
+        @apply btn-1-common p-3 rounded-full
     }
 
     .btn-2 {
-        @apply bg-primary-2 text-light-1 text-base py-3 px-5 border-2 border-primary-2 hover:bg-primary-1 hover:text-light-1 transition duration-300
+        @apply flex gap-2 items-center text-grey-1 hover:text-dark-1 transition duration-300
     }
 
-    .technology-item {
-        @apply font-bold md:text-lg
+    .section {
+        @apply pt-[calc(30px+theme(height.navbar-height))] pb-5;
     }
 }
