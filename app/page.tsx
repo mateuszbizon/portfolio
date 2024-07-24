@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Navbar />
       <HeaderElements />
-      <main className=" overflow-x-hidden">
+      <main className="overflow-x-hidden lg:overflow-visible">
         <div className="container-1 flex">
           <AsideHeader />
           <div className="lg:px-10 w-full lg:w-[calc(100%-250px)]">
