@@ -35,7 +35,7 @@ function ProjectCard({ project }: Props) {
                 )}</p>
             </div>
 
-            <div className='flex justify-center gap-7 mb-5'>
+            <div className='flex flex-col sm:flex-row justify-center items-center gap-7 mb-5'>
                 <Link href={project.link} target='_blank' title="Project page" className='btn-1'>
                     Web page <div className='icon-size-btn'><HomeIcon /></div>
                 </Link>
