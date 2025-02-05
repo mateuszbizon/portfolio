@@ -4,6 +4,7 @@ import React from 'react'
 import GithubIcon from '@/public/icons/GithubIcon';
 import HomeIcon from '@/public/icons/HomeIcon';
 import { ProjectType } from '@/types';
+import { buttonVariants } from '../ui/button';
 
 type Props = {
     project: ProjectType;
@@ -36,12 +37,12 @@ function ProjectCard({ project }: Props) {
             </div>
 
             <div className='flex flex-col sm:flex-row justify-center items-center gap-7 mb-5'>
-                <Link href={project.link} target='_blank' title="Project page" className='btn-1'>
-                    Web page <div className='icon-size-btn'><HomeIcon /></div>
+                <Link href={project.link} target='_blank' title="Project page" className={buttonVariants({ variant: "primary" })}>
+                    Web page <HomeIcon />
                 </Link>
                 
-                <Link href={project.github} target='_blank' title="Project github" className='btn-1'>
-                    Github <div className='icon-size-btn'><GithubIcon /></div>
+                <Link href={project.github} target='_blank' title="Project github" className={buttonVariants({ variant: "primary" })}>
+                    Github <GithubIcon />
                 </Link>
             </div>
 

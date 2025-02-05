@@ -3,6 +3,7 @@ import GithubIcon from '@/public/icons/GithubIcon'
 import LinkedInIcon from '@/public/icons/LinkedInIcon'
 import Link from 'next/link'
 import React from 'react'
+import { buttonVariants } from './ui/button'
 
 const LINKS = [
   { name: "LinkedIn", link: "https://www.linkedin.com/in/mateusz-bizo%C5%84-ab5672304/", icon: <LinkedInIcon /> },
@@ -26,8 +27,14 @@ function Contact() {
       <div className='flex justify-center gap-2 mt-10'>
         {SOCIAL_LINKS_LIST.map((item) => {
           return (
-            <Link key={item.name} href={item.link} target='_blank' title={item.name} className='btn-1-circle'>
-              <div className='icon-size-btn sm:icon-size'>{item.icon}</div>
+            <Link 
+                key={item.name} 
+                href={item.link} 
+                target='_blank' 
+                title={item.name} 
+                className={`${buttonVariants({ variant: "primary-circle" })} md:[&_svg]:size-6`}
+            >
+                {item.icon}
             </Link>
           )
         })}

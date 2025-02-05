@@ -2,6 +2,7 @@ import { SOCIAL_LINKS_LIST } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { buttonVariants } from '../ui/button'
 
 function AsideHeader() {
   return (
@@ -32,8 +33,14 @@ function AsideHeader() {
             <div className='flex gap-2'>
               {SOCIAL_LINKS_LIST.map((item) => {
                 return (
-                  <Link key={item.name} href={item.link} target='_blank' title={item.name} className='btn-1-circle'>
-                    <div className='icon-size-btn'>{item.icon}</div>
+                  <Link 
+                    key={item.name} 
+                    href={item.link} 
+                    target='_blank' 
+                    title={item.name} 
+                    className={buttonVariants({ variant: "primary-circle" })}
+                  >
+                    {item.icon}
                   </Link>
                 )
               })}
