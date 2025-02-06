@@ -3,6 +3,8 @@ import Image from 'next/image'
 import React from 'react'
 import RevealInView from './RevealInView'
 import { ABOUT } from '@/constants/about'
+import Experience from './Experience'
+import Education from './Education'
 
 function About() {
   return (
@@ -31,45 +33,8 @@ function About() {
         </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
-            <div>
-                <h3 className='title-3 mb-5 text-primary-2'>Experience</h3>
-                <RevealInView animationType='animate-from-left'>
-                    <div className='space-y-5'>
-                        {EXPERIENCE_LIST.map((item) => {
-                            return (
-                                <div key={item.title} className='container-2 space-y-5'>
-                                    <span className='bg-primary-1 text-light-1 py-2 px-4 rounded-lg'>{item.duration}</span>
-                                    <div className='space-y-2'>
-                                        <p className='text-lg font-medium text-dark-1'>{item.role}</p>
-                                        <p className='text-primary-2'>{item.place}</p>
-                                    </div>
-                                    <p className='text-grey-1'>{item.description}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </RevealInView>
-            </div>
-
-            <div>
-                <h3 className='title-3 mb-5 text-primary-2'>Education</h3>
-                <RevealInView animationType='animate-from-right'>
-                    <div className='space-y-5'>
-                        {EDUCATION_LIST.map((item) => {
-                            return (
-                                <div key={item.title} className='container-2 space-y-5'>
-                                    <span className='bg-primary-1 text-light-1 py-2 px-4 rounded-lg'>{item.duration}</span>
-                                    <div className='space-y-2'>
-                                        <p className='text-lg font-medium text-dark-1'>{item.type}</p>
-                                        <p className='text-primary-2'>{item.place}</p>
-                                    </div>
-                                    <p className='text-grey-1'>{item.description}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </RevealInView>
-            </div>
+            <Experience />
+            <Education />
         </div>
     </section>
   )
