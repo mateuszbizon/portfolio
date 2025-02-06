@@ -5,9 +5,6 @@ import LinkedInIcon from "@/public/icons/LinkedInIcon"
 import LocationDotIcon from "@/public/icons/LocationDotIcon"
 
 export const CONTACT = {
-    name: "Mateusz",
-    surname: "Bizoń",
-    intro: "Junior React developer with experience in Next.js",
     infos: [
         { name: "Phone number", value: "+48 723 875 386", icon: PhoneIcon() },
         { name: "Email", value: "mateuszbizon2000@gmail.com", icon: EmailIcon() },

@@ -2,6 +2,7 @@ import { EDUCATION_LIST, EXPERIENCE_LIST } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
 import RevealInView from './RevealInView'
+import { ABOUT } from '@/constants/about'
 
 function About() {
   return (
@@ -23,9 +24,7 @@ function About() {
             <div className='sm:w-3/5 lg:w-auto'>
                 <RevealInView animationType='animate-from-left'>
                     <div className='container-2'>
-                        <article className='md:text-lg text-dark-1'>
-                        I was born in Lubań (Poland) and I live in Jerzmanki (2 km from Zgorzelec) in the Lower Silesian Voivodeship in Poland. In my free time I solve Rubik's Cube on time. I have been doing this for over 5 years. I took part in several competitions and achieved results around 18 seconds. <br /><br /> In addition I love listening to music and play computer games and of course I love creating web applications for various purposes.
-                        </article>
+                        <p className='md:text-lg text-dark-1' dangerouslySetInnerHTML={{ __html: ABOUT.mainContent }}></p>
                     </div>
                 </RevealInView>
             </div>

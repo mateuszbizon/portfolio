@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { buttonVariants } from '../ui/button'
 import { CONTACT } from '@/constants/contact'
+import { ABOUT } from '@/constants/about'
 
 function AsideHeader() {
   return (
@@ -10,8 +11,8 @@ function AsideHeader() {
         <div className='container-2 w-full h-full'>
             <div className='space-y-3 h-1/2'>
                 <div className='text-dark-1 text-2xl font-medium'>
-                    <p>{CONTACT.name}</p>
-                    <p>{CONTACT.surname}</p>
+                    <p>{ABOUT.name}</p>
+                    <p>{ABOUT.surname}</p>
                 </div>
 
                 <figure className='w-full h-[200px]'>
@@ -21,7 +22,7 @@ function AsideHeader() {
 
             <div className='flex flex-col justify-between h-1/2'>
                 <div className='space-y-2 font-medium'>
-                    <p className='text-dark-1 text-lg'>{CONTACT.intro}</p>
+                    <p className='text-dark-1 text-lg'>{ABOUT.intro}</p>
 
                     {CONTACT.infos.map((item) => (
                         <div key={item.name}>
