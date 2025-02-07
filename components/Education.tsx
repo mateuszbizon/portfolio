@@ -1,26 +1,17 @@
 import React from 'react'
 import RevealInView from './RevealInView'
-import { EDUCATION_LIST } from '@/constants'
+import EducationList from './lists/EducationList'
+import { EDUCATION_LIST } from '@/constants/educationList'
+import EducationCard from './cards/EducationCard'
 
 function Education() {
   return (
     <div>
         <h3 className='title-3 mb-5 text-primary-2'>Education</h3>
         <RevealInView animationType='animate-from-right'>
-            <div className='space-y-5'>
-                {EDUCATION_LIST.map((item) => {
-                    return (
-                        <div key={item.title} className='container-2 space-y-5'>
-                            <span className='bg-primary-1 text-light-1 py-2 px-4 rounded-lg'>{item.duration}</span>
-                            <div className='space-y-2'>
-                                <p className='text-lg font-medium text-dark-1'>{item.type}</p>
-                                <p className='text-primary-2'>{item.place}</p>
-                            </div>
-                            <p className='text-grey-1'>{item.description}</p>
-                        </div>
-                    )
-                })}
-            </div>
+            <EducationList educations={EDUCATION_LIST} renderItem={(item) => (
+                <EducationCard key={item.name} education={item} />
+            )} />
         </RevealInView>
     </div>
   )

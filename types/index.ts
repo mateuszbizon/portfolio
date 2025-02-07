@@ -17,6 +17,18 @@ export type Experience = {
     }
 }
 
+export type Education = {
+    name: string;
+    title: string;
+    degree: string;
+    school: {
+        name: string;
+        city: string;
+    }
+    duration: string;
+    description: string;
+}
+
 export type ProjectType = {
     title: string;
     img: string;
