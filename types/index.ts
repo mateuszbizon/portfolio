@@ -1,8 +1,20 @@
 import { ReactNode } from "react";
 
-export type AccordionType = {
-    title: string;
-    text: string;
+export type Experience = {
+    name: string;
+    role: string;
+    company: {
+        name: string;
+        street: string;
+        city: string;
+    }
+    duration: string;
+    project: {
+        title: string;
+        description: string;
+        technologies: string[]
+        results: string[]
+    }
 }
 
 export type ProjectType = {
