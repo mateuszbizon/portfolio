@@ -2,6 +2,8 @@ import { Experience } from '@/types'
 import React from 'react'
 import ProjectTechnologyList from '../lists/ProjectTechnologyList'
 import ProjectTechnologyCard from './ProjectTechnologyCard'
+import ProjectResultList from '../lists/ProjectResultList'
+import ProjectResultCard from './ProjectResultCard'
 
 type ExperienceCardProps = {
     experience: Experience
@@ -26,6 +28,12 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
                     </div>
                 )
             }} />
+        </div>
+        <div>
+            <span className='text-dark-1 font-bold'>Results:</span>
+            <ProjectResultList results={experience.project.results} renderItem={(item) => (
+                <ProjectResultCard key={item} result={item} />
+            )} />
         </div>
     </div>
   )
