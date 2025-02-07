@@ -1,5 +1,7 @@
 import { Experience } from '@/types'
 import React from 'react'
+import ProjectTechnologyList from '../lists/ProjectTechnologyList'
+import ProjectTechnologyCard from './ProjectTechnologyCard'
 
 type ExperienceCardProps = {
     experience: Experience
@@ -13,6 +15,18 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
         <p className='text-dark-1 font-medium'>{experience.company.name} | {experience.company.street}, {experience.company.city}</p>
         <p className='text-dark-1 font-medium'>{experience.project.title}</p>
         <p className='text-dark-1'>{experience.project.description}</p>
+        <div>
+            <span className='text-dark-1 font-bold'>Technologies:</span>
+            <ProjectTechnologyList technologies={experience.project.technologies} renderItem={(item, index) => {
+                const lastItemIndex = experience.project.technologies.length - 1
+
+                return (
+                    <div key={item}>
+                        <ProjectTechnologyCard technology={item} />{index !== lastItemIndex && <span>,</span>}
+                    </div>
+                )
+            }} />
+        </div>
     </div>
   )
 }
