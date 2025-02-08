@@ -4,6 +4,8 @@ import React from 'react'
 import GithubIcon from '@/public/icons/GithubIcon';
 import { Project } from '@/types';
 import { buttonVariants } from '../ui/button';
+import ProjectTechnologyList from '../lists/ProjectTechnologyList';
+import ProjectTechnologyCard from './ProjectTechnologyCard';
 
 type Props = {
     project: Project;
@@ -13,7 +15,7 @@ function ProjectCard({ project }: Props) {
   return (
     <div className='group flex flex-col border border-grey-1/30 rounded-xl'>
         <div className='relative w-full aspect-auto overflow-hidden rounded-t-xl'>
-            <Link href={project.githubLink} target="_blank" title="Project page">
+            <Link href={project.githubLink} target="_blank" title="Project github">
                 <Image src={project.img} alt={project.alt} width={200} height={200} className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300' />    
             </Link>
             <div className='absolute bottom-2 left-2 py-2 px-4 bg-primary-1 text-light-1 rounded-lg text-xs md:text-sm'>
@@ -21,37 +23,36 @@ function ProjectCard({ project }: Props) {
             </div>
         </div>
 
-        <div className='flex flex-col p-5 bg-light-1 rounded-b-xl'>
-            <div className='mb-5 space-y-2'>
-                <Link href={project.githubLink} target='_blank' title="Project page" className='text-xl font-medium text-dark-1 hover:text-primary-1 transition duration-300'>
-                    <span>{project.title}</span>
+        <div className='p-5 bg-light-1 rounded-b-xl space-y-2'>
+            <Link href={project.githubLink} target='_blank' title="Project github" className='text-lg font-bold text-dark-1'>
+                {project.title}
+            </Link>
+            <p className='text-dark-1 font-medium'>{project.description}</p>
+            <p className='text-dark-1'>Project idea: {project.isCustomIdea ? (
+                <Link href={project.isCustomIdea.link} title={project.isCustomIdea.name} target='_blank' className='font-medium hover:text-primary-1 transition duration-300'>
+                    {project.isCustomIdea.name}
                 </Link>
-                <p className='text-dark-1'>Project idea: {project.isCustomIdea ? (
-                    <Link href={project.isCustomIdea.link} title={project.isCustomIdea.name} target='_blank' className='font-medium hover:text-primary-1 transition duration-300'>
-                        {project.isCustomIdea.name}
-                    </Link>
-                ) : (
-                    <span className='font-medium'>Own idea</span>
-                )}</p>
-            </div>
+            ) : (
+                <span className='font-medium'>Own idea</span>
+            )}</p>
 
-            <div className='flex flex-col sm:flex-row justify-center items-center gap-7 mb-5'>
-                <Link href={project.githubLink} target='_blank' title="Project github" className={buttonVariants({ variant: "primary" })}>
-                    Github <GithubIcon />
+            <div>
+                <Link href={project.githubLink} target='_blank' title="Project github" className='text-dark-1'>
+                    Visit project github
                 </Link>
             </div>
 
             <div>
-                <p className='mb-2 font-medium text-dark-1'>Built with:</p>
-                <div className='flex flex-wrap gap-3'>
-                    {project.technologies.map((item) => {
-                        return (
-                            <div key={item} className='py-2 px-4 rounded-lg bg-primary-1 text-light-1 text-sm'>
-                                {item}
-                            </div>
-                        )
-                    })}
-                </div>
+                <p className='font-bold text-dark-1'>Technologies:</p>
+                <ProjectTechnologyList technologies={project.technologies} renderItem={(item, index) => {
+                    const lastItemIndex = project.technologies.length - 1
+
+                    return (
+                        <div key={item}>
+                            <ProjectTechnologyCard technology={item} />{index !== lastItemIndex && <span>,</span>}
+                        </div>
+                    )
+                }} />
             </div>
         </div>
     </div>
