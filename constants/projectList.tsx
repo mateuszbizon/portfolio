@@ -2,10 +2,10 @@ import { Project } from "@/types";
 
 export const PROJECT_LIST: Project[] = [
 	{
-		title: "Product feedback app",
-        description: "",
+		title: "Product Feedback Application",
+        description: "Implemented web application for collecting feedback from users for products",
 		img: "/product_feedback.jpg",
-		alt: "product feedback app",
+		alt: "product feedback application",
 		githubLink: "https://github.com/mateuszbizon/product_feedback",
 		technologies: [
 			"TypeScript",
@@ -24,10 +24,10 @@ export const PROJECT_LIST: Project[] = [
 		},
 	},
 	{
-		title: "Piggy bank online",
-        description: "",
+		title: "Piggy Bank Online Application",
+        description: "Designed and implemented web application for managing personal finances",
 		img: "/piggy_bank_online.jpg",
-		alt: "piggy bank online app",
+		alt: "piggy bank online application",
 		githubLink: "https://github.com/mateuszbizon/piggy_bank_app_nextjs",
 		technologies: [
 			"TypeScript",
@@ -42,25 +42,18 @@ export const PROJECT_LIST: Project[] = [
 		isFullstack: true,
 	},
 	{
-		title: "Multi-step form",
-        description: "",
+		title: "Multi-step Form Project",
+        description: "Implemented only front-end project for multi-step form",
 		img: "/multi_step_form.jpg",
-		alt: "multi-step form app",
+		alt: "multi-step form project",
 		githubLink: "https://github.com/mateuszbizon/multi-step-form-react",
-		technologies: ["Scss", "TypeScript", "React", "react-hook-form", "zod"],
-		isFullstack: false,
-		isCustomIdea: {
-			name: "Frontend Mentor",
-			link: "https://www.frontendmentor.io/challenges",
-		},
-	},
-	{
-		title: "Social media dashboard",
-        description: "",
-		img: "/social_media_dashboard.jpg",
-		alt: "social media dashboard app",
-		githubLink: "https://github.com/mateuszbizon/social_media_dashboard_nextjs",
-		technologies: ["TypeScript", "Next.js", "TailwindCSS"],
+		technologies: [
+            "Scss",
+            "TypeScript", 
+            "React", 
+            "react-hook-form", 
+            "zod"
+        ],
 		isFullstack: false,
 		isCustomIdea: {
 			name: "Frontend Mentor",
