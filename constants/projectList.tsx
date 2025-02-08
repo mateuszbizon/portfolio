@@ -1,0 +1,70 @@
+import { Project } from "@/types";
+
+export const PROJECT_LIST: Project[] = [
+	{
+		title: "Product feedback app",
+        description: "",
+		img: "/product_feedback.jpg",
+		alt: "product feedback app",
+		githubLink: "https://github.com/mateuszbizon/product_feedback",
+		technologies: [
+			"TypeScript",
+			"Next.js",
+			"TailwindCSS",
+			"MongoDB",
+			"Clerk",
+			"server actions",
+			"react-hook-form",
+			"zod",
+		],
+		isFullstack: true,
+		isCustomIdea: {
+			name: "Frontend Mentor",
+			link: "https://www.frontendmentor.io/challenges",
+		},
+	},
+	{
+		title: "Piggy bank online",
+        description: "",
+		img: "/piggy_bank_online.jpg",
+		alt: "piggy bank online app",
+		githubLink: "https://github.com/mateuszbizon/piggy_bank_app_nextjs",
+		technologies: [
+			"TypeScript",
+			"Next.js",
+			"TailwindCSS",
+			"MongoDB",
+			"Clerk",
+			"server actions",
+			"react-hook-form",
+			"zod",
+		],
+		isFullstack: true,
+	},
+	{
+		title: "Multi-step form",
+        description: "",
+		img: "/multi_step_form.jpg",
+		alt: "multi-step form app",
+		githubLink: "https://github.com/mateuszbizon/multi-step-form-react",
+		technologies: ["Scss", "TypeScript", "React", "react-hook-form", "zod"],
+		isFullstack: false,
+		isCustomIdea: {
+			name: "Frontend Mentor",
+			link: "https://www.frontendmentor.io/challenges",
+		},
+	},
+	{
+		title: "Social media dashboard",
+        description: "",
+		img: "/social_media_dashboard.jpg",
+		alt: "social media dashboard app",
+		githubLink: "https://github.com/mateuszbizon/social_media_dashboard_nextjs",
+		technologies: ["TypeScript", "Next.js", "TailwindCSS"],
+		isFullstack: false,
+		isCustomIdea: {
+			name: "Frontend Mentor",
+			link: "https://www.frontendmentor.io/challenges",
+		},
+	},
+];

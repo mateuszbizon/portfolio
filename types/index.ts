@@ -29,16 +29,16 @@ export type Education = {
     description: string;
 }
 
-export type ProjectType = {
+export type Project = {
     title: string;
+    description: string;
     img: string;
     alt: string;
-    link: string;
-    github: string;
+    githubLink: string;
     technologies: string[];
     isFullstack: boolean;
-    customIdea?: {
-        title: string;
+    isCustomIdea?: {
+        name: string;
         link: string;
     }
 }
