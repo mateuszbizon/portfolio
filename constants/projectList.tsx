@@ -8,14 +8,10 @@ export const PROJECT_LIST: Project[] = [
 		alt: "product feedback application",
 		githubLink: "https://github.com/mateuszbizon/product_feedback",
 		technologies: [
-			"TypeScript",
 			"Next.js",
 			"TailwindCSS",
 			"MongoDB",
 			"Clerk",
-			"server actions",
-			"react-hook-form",
-			"zod",
 		],
 		isFullstack: true,
 		isCustomIdea: {
@@ -30,14 +26,10 @@ export const PROJECT_LIST: Project[] = [
 		alt: "piggy bank online application",
 		githubLink: "https://github.com/mateuszbizon/piggy_bank_app_nextjs",
 		technologies: [
-			"TypeScript",
 			"Next.js",
 			"TailwindCSS",
 			"MongoDB",
 			"Clerk",
-			"server actions",
-			"react-hook-form",
-			"zod",
 		],
 		isFullstack: true,
 	},
@@ -49,10 +41,10 @@ export const PROJECT_LIST: Project[] = [
 		githubLink: "https://github.com/mateuszbizon/multi-step-form-react",
 		technologies: [
             "Scss",
-            "TypeScript", 
+            "Typescript", 
             "React", 
             "react-hook-form", 
-            "zod"
+            "Zod"
         ],
 		isFullstack: false,
 		isCustomIdea: {
