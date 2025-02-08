@@ -12,6 +12,7 @@ const buttonVariants = cva(
         primary: "text-dark-1 border border-grey-1 hover:text-light-1 py-2 px-4 rounded-2xl btn-wave-down",
         "primary-circle": "text-dark-1 border border-grey-1 hover:text-light-1 p-3 rounded-full btn-wave-down",
         secondary: "text-grey-1 hover:text-dark-1",
+        link: "text-primary-1 hover:text-primary-2 font-bold",
       },
     },
     defaultVariants: {

@@ -29,7 +29,7 @@ function ProjectCard({ project }: Props) {
             </Link>
             <p className='text-dark-1 font-medium'>{project.description}</p>
             <p className='text-dark-1'>Project idea: {project.isCustomIdea ? (
-                <Link href={project.isCustomIdea.link} title={project.isCustomIdea.name} target='_blank' className='font-medium hover:text-primary-1 transition duration-300'>
+                <Link href={project.isCustomIdea.link} title={project.isCustomIdea.name} target='_blank' className={`${buttonVariants({ variant: "link" })}`}>
                     {project.isCustomIdea.name}
                 </Link>
             ) : (
@@ -37,7 +37,7 @@ function ProjectCard({ project }: Props) {
             )}</p>
 
             <div>
-                <Link href={project.githubLink} target='_blank' title="Project github" className='text-dark-1'>
+                <Link href={project.githubLink} target='_blank' title="Project github" className={`${buttonVariants({ variant: "link" })}`}>
                     Visit project github
                 </Link>
             </div>
