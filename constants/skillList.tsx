@@ -8,6 +8,10 @@ export const SKILL_LIST: Group<Skill>[] = [
                 name: "Html",
                 level: "solid",
             },
+            {
+                name: "Css",
+                level: "solid",
+            },
         ]
     },
 ]
