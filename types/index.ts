@@ -43,9 +43,15 @@ export type Project = {
     }
 }
 
-export type SkillType = {
-    title: string;
-    icon: ReactNode;
+export type Skill = {
+    name: string;
+    icon?: ReactNode;
+    level?: "newbie" | "basic" | "solid" | "advanced" | "expert";
+}
+
+export type Group<T> = {
+    name: string;
+    items: T[]
 }
 
 export type AnimationInViewType = {
