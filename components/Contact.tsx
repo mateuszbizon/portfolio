@@ -6,7 +6,7 @@ import { CONTACT } from '@/constants/contact'
 function Contact() {
   return (
     <section id='contact' className='section'>
-        <h2 className='title-2 title-margin-bottom text-center gradient-text'>Contact</h2>
+        <h2 className='title-2 mb-10 text-center gradient-text'>Contact</h2>
         <div className='flex flex-col sm:flex-row sm:justify-center items-center gap-5 flex-wrap'>
             {CONTACT.infos.map((item) => {
                 return (

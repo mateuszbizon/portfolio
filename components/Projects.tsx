@@ -10,7 +10,7 @@ function Projects() {
   return (
     <section id='projects' className='section'>
         <RevealInView>
-            <h2 className='title-2 title-margin-bottom gradient-text text-center lg:text-left'>Projects</h2>
+            <h2 className='title-2 mb-10 gradient-text text-center lg:text-left'>Projects</h2>
         </RevealInView>
         <div>
             <ProjectsList projects={PROJECT_LIST} renderItem={(item, index) => {

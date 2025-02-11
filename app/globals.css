@@ -11,14 +11,6 @@
         @apply bg-light-2 border border-grey-1/30 rounded-2xl p-aside-header-padding
     }
 
-    .icon-size {
-        @apply h-5 w-5 md:h-6 md:w-6;
-    }
-
-    .icon-size-btn {
-        @apply h-4 w-4;
-    }
-
     .title-1 {
         @apply font-bold text-4xl md:text-5xl lg:text-6xl;
     }
@@ -31,32 +23,12 @@
         @apply font-bold text-2xl md:text-3xl lg:text-4xl;
     }
 
-    .title-margin-bottom {
-        @apply mb-10;
-    }
-
     .gradient-text {
         @apply bg-gradient-to-r from-primary-1 to-primary-2 bg-clip-text text-transparent
     }
 
     .btn-wave-down {
         @apply relative z-10 overflow-hidden after:absolute after:bottom-0 after:left-0 after:w-full after:h-0 after:-z-10 after:bg-primary-1 hover:after:h-full after:transition-all after:duration-300
-    }
-
-    .btn-1-common {
-        @apply text-dark-1 border border-grey-1 hover:text-light-1 z-10 overflow-hidden transition duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0 after:-z-10 after:bg-primary-1 hover:after:h-full after:transition-all after:duration-300
-    }
-
-    .btn-1 {
-        @apply btn-1-common flex gap-2 items-center py-2 px-4 rounded-2xl whitespace-nowrap
-    }
-
-    .btn-1-circle {
-        @apply btn-1-common p-3 rounded-full
-    }
-
-    .btn-2 {
-        @apply flex gap-2 items-center text-grey-1 hover:text-dark-1 transition duration-300
     }
 
     .section {
