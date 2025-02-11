@@ -36,6 +36,7 @@ export type Project = {
     alt: string;
     githubLink: string;
     technologies: string[];
+    results: string[];
     isFullstack: boolean;
     isCustomIdea?: {
         name: string;

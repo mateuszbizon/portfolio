@@ -6,6 +6,8 @@ import { Project } from '@/types';
 import { buttonVariants } from '../ui/button';
 import ProjectTechnologyList from '../lists/ProjectTechnologyList';
 import ProjectTechnologyCard from './ProjectTechnologyCard';
+import ProjectResultList from '../lists/ProjectResultList';
+import ProjectResultCard from './ProjectResultCard';
 
 type Props = {
     project: Project;
@@ -53,6 +55,13 @@ function ProjectCard({ project }: Props) {
                         </div>
                     )
                 }} />
+            </div>
+
+            <div>
+                <p className='font-bold text-dark-1'>Results:</p>
+                <ProjectResultList results={project.results} renderItem={(item) => (
+                    <ProjectResultCard key={item} result={item} />
+                )} />
             </div>
         </div>
     </div>

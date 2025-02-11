@@ -13,6 +13,7 @@ export const PROJECT_LIST: Project[] = [
 			"MongoDB",
 			"Clerk",
 		],
+        results: [],
 		isFullstack: true,
 		isCustomIdea: {
 			name: "Frontend Mentor",
@@ -31,6 +32,7 @@ export const PROJECT_LIST: Project[] = [
 			"MongoDB",
 			"Clerk",
 		],
+        results: [],
 		isFullstack: true,
 	},
 	{
@@ -46,6 +48,7 @@ export const PROJECT_LIST: Project[] = [
             "react-hook-form", 
             "Zod"
         ],
+        results: [],
 		isFullstack: false,
 		isCustomIdea: {
 			name: "Frontend Mentor",
