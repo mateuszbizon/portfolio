@@ -1,6 +1,30 @@
 import { Project } from "@/types";
 
 export const PROJECT_LIST: Project[] = [
+    {
+        title: "Link-sharing Application",
+        description: "Implemented web application for link-sharing for developers",
+        img: "/devlinks.png",
+        alt: "link-sharing application",
+        githubLink: "https://github.com/mateuszbizon/devLinks",
+        technologies: [
+            "Next.js",
+            "TailwindCSS",
+            "Redux",
+            "Express.js",
+            "Prisma",
+            "PostgreSql"
+        ],
+        results: [
+            "Implemented cookie-based authentication using JWT",
+            "Optimized storing images in database by integrating back-end with external cloud-based image management service"
+        ],
+        isFullstack: true,
+        isCustomIdea: {
+			name: "Frontend Mentor",
+			link: "https://www.frontendmentor.io/challenges",
+		},
+    },
 	{
 		title: "Product Feedback Application",
         description: "Implemented web application for collecting feedback from users for products",
