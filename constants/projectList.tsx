@@ -37,7 +37,10 @@ export const PROJECT_LIST: Project[] = [
 			"MongoDB",
 			"Clerk",
 		],
-        results: [],
+        results: [
+            "Implemented application that allows manage product feedbacks with sorting and grouping",
+            "Integrated application with authentication and user management library"
+        ],
 		isFullstack: true,
 		isCustomIdea: {
 			name: "Frontend Mentor",
@@ -56,7 +59,10 @@ export const PROJECT_LIST: Project[] = [
 			"MongoDB",
 			"Clerk",
 		],
-        results: [],
+        results: [
+            "Implemented application that gives information who and how much specific person put money to physical piggy bank",
+            "Learned libraries that share authentication and user management"
+        ],
 		isFullstack: true,
 	},
 	{
@@ -72,7 +78,10 @@ export const PROJECT_LIST: Project[] = [
             "react-hook-form", 
             "Zod"
         ],
-        results: [],
+        results: [
+            "Implemented form that allows users to handle more complex forms with easier way",
+            "Learned libraries that manage handling and validating forms"
+        ],
 		isFullstack: false,
 		isCustomIdea: {
 			name: "Frontend Mentor",
