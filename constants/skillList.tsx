@@ -92,6 +92,9 @@ export const SKILL_LIST: Group<Skill>[] = [
             {
                 name: "Team work",
             },
+            {
+                name: "Problem solving",
+            },
         ]
     },
 ]
