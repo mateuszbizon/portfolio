@@ -3,6 +3,7 @@
 import React from 'react'
 import MenuBarsIcon from '@/public/icons/MenuBarsIcon';
 import NavbarItems from './NavbarItems';
+import { Button } from '../ui/button';
 
 type Props = {
     setDropdownActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -18,11 +19,9 @@ function NavbarContent({ setDropdownActive, dropdownActive }: Props) {
             <NavbarItems setDropdownActive={setDropdownActive} />
         </div>
 
-        <button className='md:hidden' onClick={() => setDropdownActive(prev => !prev)}>
-            <div className={`text-grey-1 hover:text-dark-1 transition duration-300`}>
-                <MenuBarsIcon />
-            </div>
-        </button>
+        <Button variant={"secondary"} className='md:hidden [&_svg]:size-5' onClick={() => setDropdownActive(prev => !prev)}>
+            <MenuBarsIcon />
+        </Button>
     </div>
   )
 }

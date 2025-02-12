@@ -1,17 +1,25 @@
-import { SkillType } from '@/types'
+import { Skill } from '@/types'
 import React from 'react'
+import SkillLevel from '../SkillLevel'
 
-type Props = {
-    skill: SkillType;
+type SkillCardProps = {
+    skill: Skill;
 }
 
-function SkillCard({ skill }: Props) {
+function SkillCard({ skill }: SkillCardProps) {
   return (
-    <div className='container-2 flex flex-col items-center gap-3 w-[250px] sm:w-[150px] hover:-translate-y-5 hover:bg-primary-1 hover:border-primary-1 hover:text-light-1 transition-all duration-200'>
-        <div className='h-10 w-10'>
-        {skill.icon}
+    <div className='container-2 flex flex-col items-center gap-5'>
+        <div className='space-y-3'>
+            {skill.icon && (
+                <div className='size-10'>
+                    {skill.icon}
+                </div>
+            )}
+            <p className='text-center font-bold text-primary-1 text-lg'>{skill.name}</p>
         </div>
-        <span>{skill.title}</span>
+        {skill.level && (
+            <SkillLevel skillLevel={skill.level} />
+        )}
     </div>
   )
 }

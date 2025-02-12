@@ -1,23 +1,18 @@
-import { SKILLS_LIST } from '@/constants'
 import React from 'react'
-import SkillCard from './cards/SkillCard'
 import RevealInView from './RevealInView'
+import GroupSkillList from './lists/GroupSkillList'
+import { SKILL_LIST } from '@/constants/skillList'
+import GroupSkillCard from './cards/GroupSkillCard'
 
 function Skills() {
   return (
     <section id='skills' className='section'>
         <RevealInView>
-          <h2 className='title-2 title-margin-bottom gradient-text text-center lg:text-left'>Skills</h2>
+            <h2 className='title-2 mb-10 gradient-text text-center lg:text-left'>Skills</h2>
         </RevealInView>
-        <RevealInView>
-          <div className='flex flex-col sm:flex-row sm:justify-center lg:justify-start items-center gap-10 gap-x-5 flex-wrap'>
-              {SKILLS_LIST.map((item) => {
-                return (
-                  <SkillCard key={item.title} skill={item} />
-                )
-              })}
-          </div>
-        </RevealInView>
+        <GroupSkillList items={SKILL_LIST} renderItem={(item) => (
+            <GroupSkillCard key={item.name} item={item} />
+        )} />
     </section>
   )
 }

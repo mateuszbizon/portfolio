@@ -3,6 +3,7 @@
 import ChevronDownIcon from '@/public/icons/ChevronDownIcon';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { Button, buttonVariants } from '../ui/button';
 
 type Props = {
     item: {
@@ -35,17 +36,17 @@ function NavbarItem({ item, setDropdownActive }: Props) {
   return (
     <>
         {!item.content ? (
-            <Link key={item.href} href={`#${item.href}`} onClick={() => setDropdownActive(false)} className='text-grey-1 hover:text-dark-1 transition duration-300'>
+            <Link key={item.href} href={`#${item.href}`} onClick={() => setDropdownActive(false)} className={buttonVariants({ variant: "secondary" })}>
                 {item.title}
             </Link>
         ) : (
-            <div className={`relative navbar-item-pointer ${itemActive ? "after:opacity-100" : "after:opacity-0"}`} data-dropdown>
-                <button className={`navbar-item flex gap-2 items-center cursor-pointer ${itemActive && "text-primary-2"}`} onClick={() => setItemActive(prev => !prev)} data-dropdown-button>
-                    <span className='flex gap-2 items-center'>{item.title}</span>
-                    <div className={`${itemActive ? "rotate-180" : "rotate-0"} transition-all`}>
-                      <ChevronDownIcon />
+            <div className={`relative ${itemActive ? "after:opacity-100" : "after:opacity-0"}`} data-dropdown>
+                <Button variant={"secondary"} className={`${itemActive && "text-dark-1"}`} onClick={() => setItemActive(prev => !prev)} data-dropdown-button>
+                    {item.title}
+                    <div className={`${itemActive ? "rotate-180" : "rotate-0"} transition-transform`}>
+                        <ChevronDownIcon />
                     </div>
-                </button>
+                </Button>
 
                 <div className={`absolute top-[150%] left-0 md:right-0 md:left-auto p-5 bg-light-1 w-[300px] sm:w-[500px] transition-all z-10 rounded-lg ${itemActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
                     {item.content}

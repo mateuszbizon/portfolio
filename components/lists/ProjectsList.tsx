@@ -1,20 +1,15 @@
+import { Project } from '@/types'
 import React from 'react'
-import ProjectCard from '../cards/ProjectCard'
-import { PROJECTS_LIST } from '@/constants'
-import RevealInView from '../RevealInView'
 
-function ProjectsList() {
+type ProjectsListProps = {
+    projects: Project[]
+    renderItem: (project: Project, index: number) => React.ReactNode
+}
+
+function ProjectsList({ projects, renderItem }: ProjectsListProps) {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
-        {PROJECTS_LIST.map((item, index) => {
-            const isItemEven = (index + 1) % 2 == 0 ? true : false
-
-            return (
-                <RevealInView key={item.title} animationType={isItemEven ? "animate-from-right" : "animate-from-left"}>
-                  <ProjectCard project={item} />
-                </RevealInView>
-            )
-        })}
+        {projects.map((item, index) => renderItem(item, index))}
     </div>
   )
 }
