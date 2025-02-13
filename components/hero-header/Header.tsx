@@ -16,7 +16,7 @@ function Header() {
                 <Link href={"#projects"} className={buttonVariants({ variant: "primary" })}>
                     My Works <BriefCaseIcon />
                 </Link>
-                <Link href={"/CV_Mateusz_Bizoń_developer.pdf"} className={buttonVariants({ variant: "secondary" })} download>
+                <Link href={"/Mateusz_Bizoń_CV.pdf"} className={buttonVariants({ variant: "secondary" })} download>
                     Download CV <DownloadIcon />
                 </Link>
             </div>
