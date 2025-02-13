@@ -77,6 +77,10 @@ export const SKILL_LIST: Group<Skill>[] = [
         name: "Tools",
         items: [
             {
+                name: "Git",
+                level: "solid",
+            },
+            {
                 name: "Visual Studio Code",
                 level: "solid",
             },
